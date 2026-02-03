@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Syllabus - JACPSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "pdf-red": "#E11D48", // Rose-600 for PDF icons
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-gray-900 dark:text-gray-100">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top App Bar -->
+        <header class="sticky top-0 z-50 bg-primary text-white shadow-md">
+            <div class="flex items-center justify-between px-4 py-3 pb-4 pt-12">
+                <!-- pt-12 for status bar spacing on mobile -->
+                <button onclick="window.location.href='Home Screen.html'"
+                    class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-white" style="font-size: 24px;">arrow_back</span>
+                </button>
+                <h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-wide">Syllabus</h1>
+                <div class="size-10 shrink-0"></div> <!-- Spacer for alignment -->
+            </div>
+        </header>
+        <!-- Search Bar Area -->
+        <div class="px-4 py-4 bg-background-light dark:bg-background-dark sticky top-[88px] z-40">
+            <label class="flex flex-col h-12 w-full">
+                <div
+                    class="flex w-full flex-1 items-center rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-200 dark:border-gray-700 focus-within:ring-2 focus-within:ring-primary/50 transition-shadow">
+                    <div class="text-gray-400 dark:text-gray-500 flex items-center justify-center pl-4">
+                        <span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+                    </div>
+                    <input
+                        class="flex w-full min-w-0 flex-1 resize-none bg-transparent border-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-0 focus:ring-0 h-full px-3 text-base font-normal leading-normal"
+                        placeholder="Search class or subject..." value="" />
+                </div>
+            </label>
+        </div>
+        <!-- Filter Chips -->
+        <div class="w-full overflow-x-auto hide-scrollbar pb-2">
+            <div class="flex gap-3 px-4 min-w-max">
+                <button
+                    class="flex h-9 items-center justify-center px-5 rounded-full bg-primary text-white shadow-sm transition-transform active:scale-95">
+                    <p class="text-sm font-medium leading-normal">All</p>
+                </button>
+                <button
+                    class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 shadow-sm transition-transform active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <p class="text-sm font-medium leading-normal">Secondary</p>
+                </button>
+                <button
+                    class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 shadow-sm transition-transform active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <p class="text-sm font-medium leading-normal">Higher Secondary</p>
+                </button>
+                <button
+                    class="flex h-9 items-center justify-center px-5 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 shadow-sm transition-transform active:scale-95 hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <p class="text-sm font-medium leading-normal">Primary</p>
+                </button>
+            </div>
+        </div>
+        <!-- Scrollable Content -->
+        <div class="flex-1 flex flex-col gap-6 p-4 pb-10">
+            <!-- Section 1 -->
+            <div class="flex flex-col gap-3">
+                <h3 class="text-primary dark:text-blue-300 text-lg font-bold leading-tight px-1">Secondary Section</h3>
+                <!-- Card 1 -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div
+                            class="flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20 shrink-0 size-12 text-pdf-red dark:text-red-400">
+                            <span class="material-symbols-outlined" style="font-size: 28px;">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col justify-center gap-0.5">
+                            <p
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-normal line-clamp-1">
+                                Class 9 (Science Group)</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Session
+                                2023-2024 • 2.4 MB</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <button aria-label="Download"
+                            class="flex size-10 items-center justify-center rounded-full bg-background-light dark:bg-gray-700 text-primary dark:text-blue-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 24px;">download</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div
+                            class="flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20 shrink-0 size-12 text-pdf-red dark:text-red-400">
+                            <span class="material-symbols-outlined" style="font-size: 28px;">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col justify-center gap-0.5">
+                            <p
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-normal line-clamp-1">
+                                Class 9 (Arts Group)</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Session
+                                2023-2024 • 2.1 MB</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <button aria-label="Download"
+                            class="flex size-10 items-center justify-center rounded-full bg-background-light dark:bg-gray-700 text-primary dark:text-blue-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 24px;">download</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div
+                            class="flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20 shrink-0 size-12 text-pdf-red dark:text-red-400">
+                            <span class="material-symbols-outlined" style="font-size: 28px;">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col justify-center gap-0.5">
+                            <p
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-normal line-clamp-1">
+                                Class 10 (Commerce)</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Exam Routine
+                                &amp; Syllabus • 1.8 MB</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <button aria-label="Download"
+                            class="flex size-10 items-center justify-center rounded-full bg-background-light dark:bg-gray-700 text-primary dark:text-blue-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 24px;">download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2 -->
+            <div class="flex flex-col gap-3">
+                <h3 class="text-primary dark:text-blue-300 text-lg font-bold leading-tight px-1 mt-2">Higher Secondary
+                    Section</h3>
+                <!-- Card 4 -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div
+                            class="flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20 shrink-0 size-12 text-pdf-red dark:text-red-400">
+                            <span class="material-symbols-outlined" style="font-size: 28px;">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col justify-center gap-0.5">
+                            <p
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-normal line-clamp-1">
+                                HSC 1st Year (Science)</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Physics,
+                                Chemistry, Math • 5.2 MB</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <!-- Alternative Button Style: Full Button -->
+                        <button
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary/10 dark:bg-blue-900/30 text-primary dark:text-blue-200 text-sm font-medium leading-normal w-fit hover:bg-primary/20 transition-colors">
+                            <span class="truncate">View</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div
+                            class="flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20 shrink-0 size-12 text-pdf-red dark:text-red-400">
+                            <span class="material-symbols-outlined" style="font-size: 28px;">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col justify-center gap-0.5">
+                            <p
+                                class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-normal line-clamp-1">
+                                HSC 2nd Year (English)</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Full Syllabus
+                                2024 • 3.5 MB</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <button
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit hover:bg-primary/90 transition-colors shadow-sm">
+                            <span class="truncate">Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Empty State / Illustration Area -->
+            <div class="flex flex-col items-center justify-center pt-8 pb-4 opacity-50">
+                <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4 mb-3">
+                    <span class="material-symbols-outlined text-gray-400" style="font-size: 32px;">folder_open</span>
+                </div>
+                <p class="text-sm text-gray-400 dark:text-gray-500">End of list</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

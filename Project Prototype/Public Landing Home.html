@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JACPSC - Progressive Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4F46E5",
+                        secondary: "#06B6D4",
+                        accent: "#F59E0B",
+                        "brand-pink": "#EC4899",
+                        "brand-green": "#10B981",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "text-light": "#1E293B",
+                        "text-dark": "#F1F5F9",
+                        "secondary-text-light": "#475569",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '1rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)',
+                        'vibrant': '0 10px 15px -3px rgba(79, 70, 229, 0.2)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .vibrant-gradient {
+            background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+        }
+        .soft-gradient-pink {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+        .soft-gradient-blue {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+        .soft-gradient-green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .soft-gradient-orange {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex justify-center items-start pt-0 sm:pt-6 transition-colors duration-300">
+    <div
+        class="w-full max-w-md bg-background-light dark:bg-background-dark h-full min-h-screen sm:min-h-[850px] sm:h-[850px] sm:rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col border-4 border-white dark:border-gray-800">
+        <header
+            class="px-6 py-5 flex justify-between items-center sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl z-20 border-b border-gray-100 dark:border-gray-800">
+            <h1
+                class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-tight">
+                JACPSC</h1>
+            <button onclick="window.location.href='Secure Login.html'"
+                class="px-6 py-2.5 vibrant-gradient text-white text-sm font-bold rounded-full shadow-vibrant hover:scale-105 active:scale-95 transition-all duration-200">
+                Login
+            </button>
+        </header>
+        <main class="flex-1 overflow-y-auto no-scrollbar pb-10">
+            <div class="px-5 mt-4">
+                <div class="relative w-full h-64 rounded-3xl overflow-hidden shadow-soft-xl group">
+                    <img alt="Children running on a grass field during annual sports day"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDly4UtlgbVuxCxqrt0AC1S_menYBFmVmdrLKrzWC6-9yel8jWrEjXTPquyIE5oiHE0uVTpo-JUlWsS27xb3xykOu2hZ55v_pftpbq9zqhz-QZcbeGdjmC86lt1grbTiSujnzkZrU8od_MareRCgM9vw2ixo8PrLvOgWoO47CCOkeJPHl_RJjitnIXywvNwnUydRxek7FUdDxC0wY_Nxf6XTv21V7Gj7T-VbFbQ4T0_D0vVc90D2OR5Dmo4UlCMoUl-zKlAtMZ3AHZZ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                        <span
+                            class="inline-block px-3 py-1 bg-accent text-[10px] font-bold uppercase tracking-wider rounded-full mb-2">Upcoming
+                            Event</span>
+                        <h2 class="text-2xl font-extrabold mb-1 leading-tight tracking-tight">Annual Sports Day</h2>
+                        <p class="text-sm text-gray-100 line-clamp-2 leading-relaxed opacity-90">Join us for a day of
+                            athletic achievements and school spirit on the main grounds.</p>
+                    </div>
+                    <div class="absolute bottom-4 right-6 flex space-x-2">
+                        <div class="w-6 h-1.5 rounded-full bg-white"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+                        <div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="px-5 mt-10">
+                <div class="flex justify-between items-end mb-4">
+                    <h3 class="text-xl font-extrabold text-text-light dark:text-white tracking-tight">Principal's Voice
+                    </h3>
+                    <span class="text-primary text-xs font-bold uppercase tracking-widest">Inspiration</span>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark border-none rounded-3xl p-6 shadow-soft-xl relative overflow-hidden group">
+                    <div
+                        class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700">
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="absolute -inset-1 vibrant-gradient rounded-full opacity-75 blur-sm"></div>
+                                <div class="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white">
+                                    <img alt="Portrait of Principal Dr. Anya Sharma" class="w-full h-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcgh40YSovO0mSRBLoQFbC3D2dVlrpY2gKeJVM2Wm6o0uJIIGrcxQk71971pLaLtSsUNWxmZxrg3Mojj8dkcB3vxwetjbOAnDpKrBzfmBBry1sHelVdiv7BMVZ_6yF9XalKhui3xs_cO8q1XFqOGhaEqHdQRrJsaBV5iOpddU6HWsoq7n2EoJV9KKkF-H4dJgh4pBEAuGo93azjWlvi0U0lIUgQNfIefKqnlk6TldB3kKsV4Sd2QXqbMdt0KkKGWNQbZmEm07gNuOZ" />
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-extrabold text-text-light dark:text-white leading-none">Dr. Anya
+                                    Sharma</p>
+                                <p
+                                    class="text-[11px] font-semibold text-secondary-text-light dark:text-gray-400 mt-1 uppercase tracking-wider">
+                                    Visionary Leader</p>
+                            </div>
+                        </div>
+                        <p class="text-[15px] text-secondary-text-light dark:text-gray-300 leading-relaxed font-medium">
+                            "Welcome to JACPSC, where every student's unique potential is nurtured with care and
+                            celebrated with joy. We don't just teach; we inspire excellence."
+                        </p>
+                        <div onclick="window.location.href='Public About Us.html'"
+                            class="flex items-center text-primary dark:text-blue-400 font-bold text-sm cursor-pointer group/link">
+                            <span>Discover our Philosophy</span>
+                            <span
+                                class="material-symbols-outlined text-lg ml-1 group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-5 mt-10 mb-4">
+                <h3 class="text-xl font-extrabold text-text-light dark:text-white mb-5 tracking-tight">Campus Hub</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div onclick="window.location.href='Public Admission Info.html'"
+                        class="group p-5 soft-gradient-blue dark:bg-surface-dark rounded-3xl border border-blue-100/50 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">menu_book</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Admissions</span>
+                        <p class="text-[11px] text-blue-600/70 dark:text-blue-400 mt-0.5 font-semibold">Join Our Family
+                        </p>
+                    </div>
+                    <div onclick="window.location.href='Public Admission Resuit Search.html'"
+                        class="group p-5 soft-gradient-green dark:bg-surface-dark rounded-3xl border border-green-100/50 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">stars</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Results</span>
+                        <p class="text-[11px] text-green-600/70 dark:text-green-400 mt-0.5 font-semibold">Track Success
+                        </p>
+                    </div>
+                    <div onclick="window.location.href='Public School Gallery.html'"
+                        class="group p-5 soft-gradient-pink dark:bg-surface-dark rounded-3xl border border-pink-100/50 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-brand-pink group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">photo_library</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Gallery</span>
+                        <p class="text-[11px] text-pink-600/70 dark:text-pink-400 mt-0.5 font-semibold">Life at JACPSC
+                        </p>
+                    </div>
+                    <div onclick="window.location.href='Public Notice Board.html'"
+                        class="group p-5 soft-gradient-orange dark:bg-surface-dark rounded-3xl border border-orange-100/50 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">campaign</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Notices</span>
+                        <p class="text-[11px] text-orange-600/70 dark:text-orange-400 mt-0.5 font-semibold">Latest
+                            Updates</p>
+                    </div>
+                    <div onclick="window.location.href='Public Contact Us.html'"
+                        class="group p-5 bg-gray-50 dark:bg-surface-dark rounded-3xl border border-gray-100 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">alternate_email</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Contact</span>
+                        <p class="text-[11px] text-gray-500 mt-0.5 font-semibold">Get in Touch</p>
+                    </div>
+                    <div onclick="window.location.href='Public Teachers Staff.html'"
+                        class="group p-5 bg-gray-50 dark:bg-surface-dark rounded-3xl border border-gray-100 dark:border-gray-800 cursor-pointer hover:shadow-lg transition-all active:scale-95">
+                        <div
+                            class="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-sm mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-2xl">groups_3</span>
+                        </div>
+                        <span class="text-[15px] font-bold text-text-light dark:text-gray-200">Faculty</span>
+                        <p class="text-[11px] text-gray-500 mt-0.5 font-semibold">Meet Mentors</p>
+                    </div>
+                </div>
+            </section>
+            <div class="w-full pt-4 pb-8 flex flex-col items-center justify-center space-y-2">
+                <div class="h-px w-16 bg-gray-200 dark:bg-gray-800 rounded-full mb-2"></div>
+                <p class="text-[11px] text-gray-400 font-bold uppercase tracking-widest">Proudly Progressive</p>
+                <p class="text-[10px] text-gray-300 font-medium">Made with Adil-Dev</p>
+            </div>
+        </main>
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="absolute top-1/2 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+    </div>
+
+</body>
+
+</html>

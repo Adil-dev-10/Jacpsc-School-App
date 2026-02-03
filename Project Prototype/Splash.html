@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JACPSC Splash Screen</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#002147",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#020617",
+                        "accent-blue": "#1e40af",
+                    },
+                    fontFamily: {
+                        display: ["Lexend", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-light dark:bg-background-dark font-display overflow-hidden;
+                min-height: 100dvh;
+            }
+        }
+        .loading-bar-container {
+            width: 140px;
+            height: 4px;
+            background: rgba(0, 33, 71, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+        .loading-bar-fill {
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            background: #002147;
+            border-radius: 2px;
+            animation: loadingProgress 2s ease-in-out infinite;
+        }
+        @keyframes loadingProgress {
+            0% { left: -40%; }
+            100% { left: 100%; }
+        }
+        .gradient-circle {
+            background: radial-gradient(circle at top left, #1e40af, #002147);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-between transition-colors duration-500">
+    <div class="flex-1 flex flex-col items-center justify-center w-full px-10">
+        <div class="relative mb-12">
+            <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150"></div>
+            <div
+                class="relative w-48 h-48 gradient-circle rounded-full flex items-center justify-center shadow-2xl border-4 border-white/10">
+                <span class="material-symbols-outlined text-8xl text-white fill-1">school</span>
+            </div>
+        </div>
+        <div class="text-center space-y-4">
+            <h1 class="text-3xl font-bold text-primary dark:text-slate-100 tracking-tight leading-[1.15]">
+                Jamuna Cantonment <br />
+                <span class="font-medium opacity-90">Public School &amp; College</span>
+            </h1>
+            <div class="flex items-center justify-center space-x-3">
+                <div class="h-[1px] w-8 bg-primary/20 dark:bg-slate-700"></div>
+                <p class="text-sm font-semibold text-primary/60 dark:text-slate-400 tracking-[0.3em] uppercase">
+                    JACPSC
+                </p>
+                <div class="h-[1px] w-8 bg-primary/20 dark:bg-slate-700"></div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex flex-col items-center pb-16 space-y-4">
+        <div class="loading-bar-container dark:bg-slate-800">
+            <div class="loading-bar-fill dark:bg-blue-500"></div>
+        </div>
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-50/50 dark:bg-blue-900/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-indigo-50/50 dark:bg-indigo-900/10 rounded-full blur-3xl">
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = 'Public Landing Home.html';
+        }, 3000); // 3 seconds delay
+    </script>
+</body>
+
+</html>

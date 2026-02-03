@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JACPSC Class Messenger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b6cda",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+    <div
+        class="max-w-md mx-auto min-h-screen bg-white dark:bg-slate-900 shadow-2xl relative overflow-hidden flex flex-col">
+        <div
+            class="h-12 w-full bg-white dark:bg-slate-900 flex items-end justify-between px-6 pb-2 select-none sticky top-0 z-50">
+            <span class="text-sm font-semibold dark:text-white">9:41</span>
+            <div class="flex gap-1.5 items-center">
+                <span class="material-symbols-outlined text-[18px] dark:text-white"
+                    data-icon="signal_cellular_alt">signal_cellular_alt</span>
+                <span class="material-symbols-outlined text-[18px] dark:text-white" data-icon="wifi">wifi</span>
+                <span class="material-symbols-outlined text-[18px] dark:text-white"
+                    data-icon="battery_full">battery_full</span>
+            </div>
+        </div>
+        <div
+            class="sticky top-12 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center justify-between px-4 py-3">
+                <div class="flex flex-col">
+                    <h1 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-tight">Messages
+                    </h1>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">JACPSC Portal</span>
+                </div>
+                <button
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">edit_square</span>
+                </button>
+            </div>
+            <div class="px-4 pb-3">
+                <div
+                    class="relative flex items-center w-full h-10 rounded-lg focus-within:shadow-lg bg-slate-100 dark:bg-slate-800 overflow-hidden transition-shadow duration-200">
+                    <div class="grid place-items-center h-full w-12 text-slate-400">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+                    </div>
+                    <input
+                        class="peer h-full w-full outline-none text-sm text-slate-700 dark:text-slate-200 pr-2 bg-transparent placeholder-slate-400 font-normal"
+                        id="search" placeholder="Search classes or messages..." type="text" />
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 overflow-y-auto no-scrollbar">
+            <div class="px-5 pt-4 pb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Pinned Groups</h3>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div
+                        class="h-14 w-14 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center text-primary dark:text-blue-300 font-bold text-lg shadow-sm border border-blue-50 dark:border-blue-900">
+                        <span class="material-symbols-outlined text-2xl">science</span>
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 h-3.5 w-3.5 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-semibold truncate pr-2">Class 10 -
+                            Physics</p>
+                        <p class="text-primary text-xs font-semibold whitespace-nowrap">2m ago</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-slate-900 dark:text-slate-200 text-sm font-medium line-clamp-1">Sir: Please
+                            review Chapter 4 formulas.</p>
+                        <span
+                            class="flex items-center justify-center h-5 w-5 bg-primary text-white text-[10px] font-bold rounded-full shadow-sm ml-2">3</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div class="h-14 w-14 rounded-full overflow-hidden shadow-sm"
+                        data-alt="Science club lab equipment colorful"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3Z6ByJThS6zq6lwZisvDUxUxFX7Q32i4fghWru0Av6WXJptHXTew3wdqI_EbKnKm-3TFeUR1iS_KVyagMKYpP8p3ImR1nHqLlQ4_-Rp5UNDGV-CW7eoqCXAiQq4f04SWnMebqZwRb6cqzxPzPSpaVXgWUaGfX2KW05bG2GmO7vYkNW116H55sbvJf3B6xeP7DUXwEjA1qvCe305EyHE0ahLE-zut3DwVr1L-6AIh6mhd6j6ob-AlEhwj_BtljR06FgPbKo5cur0cY'); background-size: cover; background-position: center;">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-semibold truncate pr-2">Science Club</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-normal whitespace-nowrap">10:45 AM</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1">Don't forget the
+                            fair registration deadline!</p>
+                        <span
+                            class="flex items-center justify-center h-5 w-5 bg-primary text-white text-[10px] font-bold rounded-full shadow-sm ml-2">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-5 pt-6 pb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">All Messages</h3>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div
+                        class="h-14 w-14 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 font-bold text-lg shadow-sm">
+                        PT
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-medium truncate pr-2">Parents &amp;
+                            Teachers (Sec B)</p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs font-normal whitespace-nowrap">Yesterday
+                        </p>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1">Meeting scheduled for
+                        Friday at 4PM in the main hall.</p>
+                </div>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div class="h-14 w-14 rounded-full overflow-hidden shadow-sm"
+                        data-alt="Group of students studying together outdoors"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6udqjIPfxMy6En0WoA4rvcbMyU-T8nJ4jtstYr5mp3YWJSNwQuLHTvdJozaIIH9eCgWZ27XW5ubLYScAWx0tD_Ux_-mOlaaShsEJTtUA1iCXQzBhQ0KA268sr0slxoSCU_U0AAEkdows7DDxqO6BNCNcyzF-YsgBVcRUslouzKjTdbfdaq_V2GzvBaifBKL6d3ZKYsNLmpNlfxO7Sia8Mc6I7pkDVMpi7MVdThwFUNfh0tRv8srcBUsYNR5TiPukbrT02Lw-ScSmg'); background-size: cover; background-position: center;">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-medium truncate pr-2">Class 9 - Biology
+                        </p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs font-normal whitespace-nowrap">Tue</p>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1"><span
+                            class="font-medium text-slate-800 dark:text-slate-300">You:</span> Sir, is the assignment
+                        due tomorrow?</p>
+                </div>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div
+                        class="h-14 w-14 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 font-bold text-lg shadow-sm">
+                        <span class="material-symbols-outlined text-2xl">sports_basketball</span>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-medium truncate pr-2">JACPSC Sports Team
+                        </p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs font-normal whitespace-nowrap">Mon</p>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1">Practice cancelled
+                        due to rain.</p>
+                </div>
+            </div>
+            <div
+                class="group relative flex items-center gap-4 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800/50">
+                <div class="relative shrink-0">
+                    <div
+                        class="h-14 w-14 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold text-lg shadow-sm">
+                        12
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center flex-1 min-w-0">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <p class="text-slate-900 dark:text-white text-base font-medium truncate pr-2">Class 12 - Math
+                            (Advanced)</p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs font-normal whitespace-nowrap">Last week
+                        </p>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal line-clamp-1">Calculus test results
+                        are out.</p>
+                </div>
+            </div>
+            <div class="h-20"></div>
+        </div>
+        <div
+            class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex justify-around items-center h-20 px-4 pb-4 sticky bottom-0 z-50">
+            <button onclick="window.location.href='Home Screen.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-[28px]">home</span>
+                <span class="text-[10px] font-medium">Home</span>
+            </button>
+            <button onclick="window.location.href='Official Notices.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-[28px]">notifications</span>
+                <span class="text-[10px] font-medium">Notices</span>
+            </button>
+            <button onclick="window.location.href='Class Messenger.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-primary">
+                <div class="relative">
+                    <span class="material-symbols-outlined text-[28px] font-bold">chat_bubble</span>
+                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                </div>
+                <span class="text-[10px] font-medium">Messages</span>
+            </button>
+            <button onclick="window.location.href='Main Navigation Menu.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-[28px]">menu</span>
+                <span class="text-[10px] font-medium">Menu</span>
+            </button>
+        </div>
+        <button
+            class="absolute bottom-24 right-5 h-14 w-14 bg-primary rounded-full shadow-lg shadow-blue-500/30 flex items-center justify-center text-white hover:bg-blue-700 active:scale-95 transition-all z-40">
+            <span class="material-symbols-outlined" style="font-size: 28px;">add_comment</span>
+        </button>
+    </div>
+
+</body>
+
+</html>

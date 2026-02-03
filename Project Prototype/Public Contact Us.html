@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - JACPSC</title>
+    <!-- Google Fonts: Lexend -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#116cd4",
+                        "navy": "#0a2540", /* Added for specific Navy Blue accents request */
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar hiding if needed, keeping it clean */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-200">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden max-w-md mx-auto bg-white dark:bg-[#101822] shadow-sm">
+        <!-- Header -->
+        <div
+            class="sticky top-0 z-10 flex items-center bg-white dark:bg-[#101822] p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+            <div onclick="window.location.href='Public Landing Home.html'"
+                class="text-[#111418] dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </div>
+            <h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight flex-1 text-center pr-12">Contact
+                Us</h2>
+        </div>
+        <div class="flex-1 overflow-y-auto pb-8">
+            <!-- Hero / Branding Touch -->
+            <div class="px-4 py-4">
+                <h1 class="text-navy dark:text-blue-100 text-2xl font-bold leading-tight">Get in Touch</h1>
+                <p class="text-[#617489] dark:text-gray-400 text-sm font-normal mt-1">We are here to help you with any
+                    inquiries.</p>
+            </div>
+            <!-- Quick Action Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 px-4">
+                <!-- Address Card -->
+                <div
+                    class="flex flex-1 gap-3 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2634] p-4 flex-row sm:flex-col items-center sm:items-start shadow-sm cursor-pointer hover:border-primary transition-colors">
+                    <div
+                        class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary shrink-0">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-[#111418] dark:text-white text-sm font-bold leading-tight">Address</h2>
+                        <p class="text-[#617489] dark:text-gray-400 text-xs font-normal leading-normal">Jamuna
+                            Cantonment, Bhuapur</p>
+                    </div>
+                </div>
+                <!-- Phone Card -->
+                <div
+                    class="flex flex-1 gap-3 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2634] p-4 flex-row sm:flex-col items-center sm:items-start shadow-sm cursor-pointer hover:border-primary transition-colors">
+                    <div
+                        class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary shrink-0">
+                        <span class="material-symbols-outlined">call</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-[#111418] dark:text-white text-sm font-bold leading-tight">Phone</h2>
+                        <p class="text-[#617489] dark:text-gray-400 text-xs font-normal leading-normal">+880 1712-345678
+                        </p>
+                    </div>
+                </div>
+                <!-- Email Card -->
+                <div
+                    class="flex flex-1 gap-3 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2634] p-4 flex-row sm:flex-col items-center sm:items-start shadow-sm cursor-pointer hover:border-primary transition-colors">
+                    <div
+                        class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary shrink-0">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                        <h2 class="text-[#111418] dark:text-white text-sm font-bold leading-tight">Email</h2>
+                        <p class="text-[#617489] dark:text-gray-400 text-xs font-normal leading-normal">
+                            info@jacpsc.edu.bd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-6"></div>
+            <!-- Inquiry Form Section -->
+            <div class="px-4">
+                <h2 class="text-navy dark:text-white tracking-tight text-[22px] font-bold leading-tight pb-2">Have a
+                    Question?</h2>
+                <p class="text-[#617489] dark:text-gray-400 text-sm font-normal leading-normal pb-6">Fill out the form
+                    below and our admin team will get back to you within 24 hours.</p>
+                <form class="flex flex-col gap-4">
+                    <!-- Full Name -->
+                    <label class="flex flex-col gap-1.5 w-full">
+                        <span class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">Full
+                            Name</span>
+                        <input
+                            class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white placeholder:text-[#617489] dark:placeholder:text-gray-500 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-gray-600 bg-white dark:bg-[#1a2634] focus:border-primary h-12 px-4 text-base font-normal leading-normal transition-all"
+                            placeholder="Enter your full name" type="text" />
+                    </label>
+                    <!-- Email/ID -->
+                    <label class="flex flex-col gap-1.5 w-full">
+                        <span class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">Email or
+                            Student ID</span>
+                        <input
+                            class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white placeholder:text-[#617489] dark:placeholder:text-gray-500 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-gray-600 bg-white dark:bg-[#1a2634] focus:border-primary h-12 px-4 text-base font-normal leading-normal transition-all"
+                            placeholder="e.g. 12345 or email@example.com" type="text" />
+                    </label>
+                    <!-- Subject Dropdown -->
+                    <label class="flex flex-col gap-1.5 w-full">
+                        <span
+                            class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">Subject</span>
+                        <div class="relative">
+                            <select
+                                class="form-select flex w-full min-w-0 appearance-none rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-gray-600 bg-white dark:bg-[#1a2634] focus:border-primary h-12 px-4 pr-10 text-base font-normal leading-normal transition-all">
+                                <option>General Inquiry</option>
+                                <option>Admissions</option>
+                                <option>Tuition Fees</option>
+                                <option>Academic Support</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#617489] dark:text-gray-400">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Message Textarea -->
+                    <label class="flex flex-col gap-1.5 w-full">
+                        <span
+                            class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">Message</span>
+                        <textarea
+                            class="form-textarea flex w-full min-w-0 resize-none rounded-lg text-[#111418] dark:text-white placeholder:text-[#617489] dark:placeholder:text-gray-500 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#dbe0e6] dark:border-gray-600 bg-white dark:bg-[#1a2634] focus:border-primary min-h-[120px] p-4 text-base font-normal leading-normal transition-all"
+                            placeholder="How can we help you?"></textarea>
+                    </label>
+                    <!-- Submit Button -->
+                    <button
+                        class="mt-2 flex w-full items-center justify-center rounded-xl bg-primary text-white hover:bg-blue-700 active:bg-blue-800 h-12 px-5 text-base font-bold tracking-wide transition-colors shadow-sm">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <div class="h-8"></div>
+            <!-- Map Section -->
+            <div class="px-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Find us on Campus</h3>
+                    <span class="text-primary text-sm font-medium cursor-pointer hover:underline">Open Maps</span>
+                </div>
+                <div
+                    class="relative w-full h-48 rounded-xl overflow-hidden shadow-sm border border-[#dbe0e6] dark:border-gray-700">
+                    <!-- Interactive Map Preview -->
+                    <img alt="Aerial map view of a university campus with green fields and buildings"
+                        class="absolute inset-0 w-full h-full object-cover" data-location="Jamuna Cantonment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebb8afEGOLeXYt5jhGVTGn_ZhfQKnCQ-c9ZDq-DR_B6cwSFt2UU5LGUnzoiHXcsqbFisVtMY90jVePFWoOi9hstgFzrw6yYKicTkMmuLIM5vEK2pfy8bm9k0MpZjFi67NtWQYGE1H0p6oQiW3b8qojH5CkXPWFdFOwkqkkGMlGjGURV9f8gejfBO2grupWdl1PoJ4dtIA1yyoJKLbyj_XxBokMmkJjMbQ8tF5JULUM8xo9Jvkh8k-l8hlJS-wgcHJLblcA4F9oWzY" />
+                    <div class="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors"></div>
+                    <!-- Map Pin Overlay -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                        <span class="material-symbols-outlined text-red-600 drop-shadow-md text-4xl"
+                            style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        <div class="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md shadow-sm mt-1">
+                            <span class="text-xs font-bold text-navy">JACPSC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="mt-8 px-4 text-center pb-6">
+                <p class="text-[#9aa6b2] dark:text-gray-500 text-xs font-normal">© 2023 Jamuna Cantonment Public School
+                    &amp; College.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

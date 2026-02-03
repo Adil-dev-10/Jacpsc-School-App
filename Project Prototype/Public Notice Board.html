@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Public Notice Board - JACPSC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0d78f2",
+                        "background-light": "#f5f7f8",
+                        "surface-light": "#FFFFFF",
+                        "text-light": "#1E3A8A",
+                        "secondary-text-light": "#6B7280"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    boxShadow: {
+                        soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        card: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    body {
+        min-height: max(884px, 100dvh);
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .active-tab .material-symbols-outlined {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+    <div class="sticky top-0 z-50 bg-background-light/90 backdrop-blur-md border-b border-gray-200 pt-4">
+        <header class="px-5 pb-4 flex items-center">
+            <h1 class="text-xl font-bold text-gray-900 font-display">Notice Board</h1>
+        </header>
+        <div class="px-5 pb-4">
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-gray-400 text-xl">search</span>
+                </span>
+                <input
+                    class="w-full pl-10 pr-4 py-2.5 bg-gray-200/50 border-none rounded-xl text-sm text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary transition-all"
+                    placeholder="Search notices..." type="text" />
+            </div>
+        </div>
+    </div>
+    <main class="flex-1 px-5 py-4 space-y-4 overflow-y-auto pb-28">
+        <div
+            class="bg-primary rounded-2xl p-5 shadow-soft text-white relative overflow-hidden group cursor-pointer transition-transform active:scale-[0.98]">
+            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full blur-xl"></div>
+            <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-20 h-20 bg-blue-400 opacity-20 rounded-full blur-xl">
+            </div>
+            <div class="relative z-10">
+                <div class="flex justify-between items-start mb-3">
+                    <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/20 text-white backdrop-blur-sm border border-white/10">
+                        <span class="material-symbols-outlined text-xs mr-1" style="font-size: 14px;">push_pin</span>
+                        Important
+                    </span>
+                    <span class="text-xs text-blue-100 font-medium opacity-90">Today</span>
+                </div>
+                <h2 class="text-lg font-bold mb-2 leading-tight font-display">Revised Examination Schedule for Class X
+                    &amp; XII</h2>
+                <p class="text-sm text-blue-100 line-clamp-2 opacity-90">Please refer to the attached document regarding
+                    the changes in the upcoming board examination dates due to unforeseen circumstances.</p>
+                <div class="mt-4 flex items-center text-xs font-medium text-blue-100">
+                    <span>Read full notice</span>
+                    <span
+                        class="material-symbols-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </div>
+        </div>
+        <div class="pt-2 pb-1">
+            <h3 class="text-base font-semibold text-gray-900 font-display">Latest Updates</h3>
+        </div>
+        <div class="space-y-3">
+            <div
+                class="bg-surface-light rounded-xl p-4 shadow-card border border-gray-100 hover:shadow-md transition-shadow cursor-pointer active:bg-gray-50">
+                <div class="flex gap-4">
+                    <div
+                        class="flex-shrink-0 flex flex-col items-center justify-center bg-blue-50 w-14 h-14 rounded-lg border border-blue-100">
+                        <span class="text-xs font-bold text-primary uppercase">OCT</span>
+                        <span class="text-xl font-bold text-gray-900">24</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-semibold text-gray-900 truncate pr-2">Annual Sports Day Registration
+                            </h4>
+                            <span class="w-2 h-2 rounded-full bg-red-500 mt-1.5"></span>
+                        </div>
+                        <p class="text-xs text-secondary-text-light mt-1 line-clamp-2">
+                            Registration for the annual sports meet is now open. Students interested in participating in
+                            track and field events.
+                        </p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <span class="text-[10px] text-gray-400 flex items-center">
+                                <span class="material-symbols-outlined text-[12px] mr-1"
+                                    style="font-size: 12px;">schedule</span> 10:30 AM
+                            </span>
+                            <span
+                                class="text-[10px] text-primary font-medium bg-blue-50 px-2 py-0.5 rounded">Sports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light rounded-xl p-4 shadow-card border border-gray-100 hover:shadow-md transition-shadow cursor-pointer active:bg-gray-50">
+                <div class="flex gap-4">
+                    <div
+                        class="flex-shrink-0 flex flex-col items-center justify-center bg-gray-50 w-14 h-14 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase">OCT</span>
+                        <span class="text-xl font-bold text-gray-900">22</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-semibold text-gray-900 truncate pr-2">Winter Uniform Guidelines</h4>
+                        </div>
+                        <p class="text-xs text-secondary-text-light mt-1 line-clamp-2">
+                            All students are expected to switch to the winter uniform starting from November 1st.
+                            Details attached.
+                        </p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <span class="text-[10px] text-gray-400 flex items-center">
+                                <span class="material-symbols-outlined text-[12px] mr-1"
+                                    style="font-size: 12px;">schedule</span> 09:15 AM
+                            </span>
+                            <span
+                                class="text-[10px] text-gray-600 font-medium bg-gray-100 px-2 py-0.5 rounded">General</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light rounded-xl p-4 shadow-card border border-gray-100 hover:shadow-md transition-shadow cursor-pointer active:bg-gray-50">
+                <div class="flex gap-4">
+                    <div
+                        class="flex-shrink-0 flex flex-col items-center justify-center bg-gray-50 w-14 h-14 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase">OCT</span>
+                        <span class="text-xl font-bold text-gray-900">18</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-semibold text-gray-900 truncate pr-2">Parent-Teacher Meeting (PTM)
+                            </h4>
+                        </div>
+                        <p class="text-xs text-secondary-text-light mt-1 line-clamp-2">
+                            The PTM for Term 1 results will be held on Saturday. Slots have been emailed to parents.
+                        </p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <span class="text-[10px] text-gray-400 flex items-center">
+                                <span class="material-symbols-outlined text-[12px] mr-1"
+                                    style="font-size: 12px;">schedule</span> 2:00 PM
+                            </span>
+                            <span
+                                class="text-[10px] text-purple-600 font-medium bg-purple-50 px-2 py-0.5 rounded">Events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light rounded-xl p-4 shadow-card border border-gray-100 hover:shadow-md transition-shadow cursor-pointer active:bg-gray-50">
+                <div class="flex gap-4">
+                    <div
+                        class="flex-shrink-0 flex flex-col items-center justify-center bg-gray-50 w-14 h-14 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase">OCT</span>
+                        <span class="text-xl font-bold text-gray-900">15</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-semibold text-gray-900 truncate pr-2">Library Book Return Deadline
+                            </h4>
+                        </div>
+                        <p class="text-xs text-secondary-text-light mt-1 line-clamp-2">
+                            Students must return all borrowed library books before the semester break starts. Late fees
+                            apply.
+                        </p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <span class="text-[10px] text-gray-400 flex items-center">
+                                <span class="material-symbols-outlined text-[12px] mr-1"
+                                    style="font-size: 12px;">schedule</span> 11:45 AM
+                            </span>
+                            <span
+                                class="text-[10px] text-orange-600 font-medium bg-orange-50 px-2 py-0.5 rounded">Academic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-light rounded-xl p-4 shadow-card border border-gray-100 hover:shadow-md transition-shadow cursor-pointer active:bg-gray-50 opacity-75">
+                <div class="flex gap-4">
+                    <div
+                        class="flex-shrink-0 flex flex-col items-center justify-center bg-gray-50 w-14 h-14 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase">OCT</span>
+                        <span class="text-xl font-bold text-gray-900">10</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-semibold text-gray-900 truncate pr-2">Holiday Notice: Dusshera</h4>
+                        </div>
+                        <p class="text-xs text-secondary-text-light mt-1 line-clamp-2">
+                            The school will remain closed on account of Dusshera. Regular classes resume the following
+                            Monday.
+                        </p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <span class="text-[10px] text-gray-400 flex items-center">
+                                <span class="material-symbols-outlined text-[12px] mr-1"
+                                    style="font-size: 12px;">schedule</span> 08:00 AM
+                            </span>
+                            <span
+                                class="text-[10px] text-gray-600 font-medium bg-gray-100 px-2 py-0.5 rounded">Holiday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-6">
+            <p class="text-xs text-gray-400">You're all caught up!</p>
+        </div>
+    </main>
+    <nav
+        class="fixed bottom-0 w-full bg-surface-light border-t border-gray-200 pb-6 pt-2 px-6 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.05)] z-40">
+        <div class="flex justify-between items-center max-w-md mx-auto">
+            <button onclick="window.location.href='Public Landing Home.html'"
+                class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">home</span>
+                <span class="text-[10px] font-medium">Home</span>
+            </button>
+            <button onclick="window.location.href='Public School Gallery.html'"
+                class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">gallery_thumbnail</span>
+                <span class="text-[10px] font-medium">Gallery</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 p-2 text-primary active-tab transition-colors">
+                <span class="material-symbols-outlined text-2xl">campaign</span>
+                <span class="text-[10px] font-medium">Notice</span>
+            </button>
+            <button onclick="window.location.href='Public About Us.html'"
+                class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">info</span>
+                <span class="text-[10px] font-medium">About</span>
+            </button>
+        </div>
+    </nav>
+
+</body>
+
+</html>

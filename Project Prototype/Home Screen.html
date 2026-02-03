@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Home Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div
+        class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl overflow-x-hidden pb-20">
+        <header class="bg-primary pt-6 pb-6 px-4 rounded-b-2xl shadow-md z-10">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-white/20"
+                            data-alt="Portrait of a male student smiling"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL3jyhRSPlkiSWFveeA9Gpu4Ghi8erLp02S_nXYb8bUpXW8OdQH6j53ZsKVpMDRLy5fquFww9lntNnGU5s9pCk61yWCXohHdsff8nrHdto--T4KVuTGC8wS520d_87jrcHqYA50CnkBjwmfF15MUGLlqdpVLktLzr3a3FezjuAZItZBU8BWNdNjfb6gApeAUtNv6bPqxVpbwtVp6qfjxV8Fajt3nCsAidvSTVPuiC-OaWVaybMHvPnotJXzgGNvedukAUSTYt-OsDy");'>
+                        </div>
+                        <div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-primary">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-blue-200 text-sm font-light">Good Morning,</p>
+                        <h2 class="text-white text-xl font-bold leading-tight">Tanvir Ahmed</h2>
+                    </div>
+                </div>
+                <button onclick="window.location.href='Official Notices.html'"
+                    class="relative flex items-center justify-center size-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">notifications</span>
+                    <span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full"></span>
+                </button>
+            </div>
+        </header>
+        <main class="flex flex-col gap-6 -mt-4 px-4">
+            <div class="w-full overflow-hidden rounded-xl shadow-lg">
+                <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-4">
+                    <div class="relative flex-none w-full snap-center rounded-xl overflow-hidden aspect-[16/9] group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Students presenting projects at a science fair"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC01RJJlOjCEYGDV21EXAe79m52Em208wTHpR4LMU8S6UgNDiYOj8av2a5vTGYf3scmaRbwW3a3qV065hsz9Ox8tlHxRdfCJzeKXy1AntcML1_e48AX2wZH2we4ZXdvkxgwpG5_5VI3kZMuATa5O_ZPQxbK3wUjVlioIUgmX1to8z8qHvQZt6L2sN82PxxClPcDBVjpjQdnZqO-y_jm4RBTYtDxo48hvECK7zZpZDlW8xfAzYw-BFB7bWnSCV83QhdqGBhWKdVIeVZH");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4 w-full">
+                            <span
+                                class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Event</span>
+                            <h3 class="text-white text-lg font-bold leading-tight">Annual Science Fair 2023</h3>
+                            <p class="text-gray-300 text-xs mt-1 truncate">Highlights from yesterday's amazing projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative flex-none w-full snap-center rounded-xl overflow-hidden aspect-[16/9] group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Students debating on stage in an auditorium"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDE8NOHnofoNj2BPJAGg5LQZMO5Cj1XEzn2bhM4OjJwvLpLAqkXCHYeC0lcH-ClHCIh8FAYgHbuvQNvgV4onaooT9UNYIy6DUJAQF7XXTBIt2_o-p0YfU_fwwjpBfWPlKJGqbVw4lsr_Ly6ZNR8OC0aqQEvUotuACkWHftRMJJOKtN533CT3SXmlVJlzXgMMEzWs8EoClFYiId1UlmVhaHfSAtjXYT7YmFhOuFDWl0TynNHYIG2Zt85PGOrYRGTUNX0nQoEeTUdmWnS");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4 w-full">
+                            <span
+                                class="bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">Competition</span>
+                            <h3 class="text-white text-lg font-bold leading-tight">Inter-House Debate Finals</h3>
+                            <p class="text-gray-300 text-xs mt-1 truncate">Watch the replay of the intense final round.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3
+                    class="text-slate-800 dark:text-slate-200 text-sm font-bold mb-3 px-1 uppercase tracking-wider opacity-70">
+                    Quick Access</h3>
+                <div class="grid grid-cols-3 gap-3">
+                    <button onclick="window.location.href='Syllabus.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300">
+                            <span class="material-symbols-outlined text-[28px]">menu_book</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">Academic</span>
+                    </button>
+                    <button onclick="window.location.href='My Attendance.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                            <span class="material-symbols-outlined text-[28px]">calendar_month</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">Attendance</span>
+                    </button>
+                    <button onclick="window.location.href='Result Search and View.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">
+                            <span class="material-symbols-outlined text-[28px]">analytics</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">Result</span>
+                    </button>
+                    <button onclick="window.location.href='Fees and Payments.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300">
+                            <span class="material-symbols-outlined text-[28px]">payments</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">Fees</span>
+                    </button>
+                    <button onclick="window.location.href='Class Routine.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300">
+                            <span class="material-symbols-outlined text-[28px]">schedule</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">Routine</span>
+                    </button>
+                    <button onclick="window.location.href='Main Navigation Menu.html'"
+                        class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <div
+                            class="flex items-center justify-center size-12 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-[28px]">grid_view</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs font-semibold">More</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between px-1">
+                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">Upcoming Classes</h3>
+                    <a class="text-primary dark:text-blue-300 text-sm font-semibold" href="Class Routine.html">See
+                        All</a>
+                </div>
+                <div class="flex overflow-x-auto hide-scrollbar gap-3 pb-2 -mx-4 px-4">
+                    <div
+                        class="min-w-[240px] flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <div
+                                class="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-bold">
+                                09:00 AM
+                            </div>
+                            <span class="material-symbols-outlined text-slate-400 text-xl">more_vert</span>
+                        </div>
+                        <h4 class="text-slate-900 dark:text-white font-bold text-lg">Mathematics</h4>
+                        <div class="flex items-center gap-2 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">person</span>
+                            <span>Mr. Rahman</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">meeting_room</span>
+                            <span>Room 302</span>
+                        </div>
+                    </div>
+                    <div
+                        class="min-w-[240px] flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <div
+                                class="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-2 py-1 rounded text-xs font-bold">
+                                10:00 AM
+                            </div>
+                            <span class="material-symbols-outlined text-slate-400 text-xl">more_vert</span>
+                        </div>
+                        <h4 class="text-slate-900 dark:text-white font-bold text-lg">Physics</h4>
+                        <div class="flex items-center gap-2 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">person</span>
+                            <span>Ms. Nasreen</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">meeting_room</span>
+                            <span>Lab 2</span>
+                        </div>
+                    </div>
+                    <div
+                        class="min-w-[240px] flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <div
+                                class="bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 px-2 py-1 rounded text-xs font-bold">
+                                11:30 AM
+                            </div>
+                            <span class="material-symbols-outlined text-slate-400 text-xl">more_vert</span>
+                        </div>
+                        <h4 class="text-slate-900 dark:text-white font-bold text-lg">Chemistry</h4>
+                        <div class="flex items-center gap-2 mt-2 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">person</span>
+                            <span>Mr. Ahmed</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">meeting_room</span>
+                            <span>Lab 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-6">
+                <div class="flex items-center justify-between px-1">
+                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">Recent Notices</h3>
+                    <a class="text-primary dark:text-blue-300 text-sm font-semibold" href="Official Notices.html">View
+                        All</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div onclick="window.location.href='Official Notices.html'"
+                        class="cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+                        <div
+                            class="flex flex-col items-center justify-center size-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-300 shrink-0">
+                            <span class="text-xs font-bold uppercase">Apr</span>
+                            <span class="text-lg font-bold leading-none">10</span>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-slate-900 dark:text-white text-base font-semibold line-clamp-1">
+                                    Eid-ul-Fitr Holiday</h4>
+                                <span
+                                    class="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 text-[10px] font-bold px-2 py-0.5 rounded-full">NEW</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-1 line-clamp-1">School will remain
+                                closed from 12th April.</p>
+                            <span class="text-slate-400 text-xs mt-1">Yesterday</span>
+                        </div>
+                    </div>
+                    <div onclick="window.location.href='Official Notices.html'"
+                        class="cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+                        <div
+                            class="flex flex-col items-center justify-center size-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 shrink-0">
+                            <span class="text-xs font-bold uppercase">Apr</span>
+                            <span class="text-lg font-bold leading-none">08</span>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <h4 class="text-slate-900 dark:text-white text-base font-semibold line-clamp-1">Half-Yearly
+                                Exam Schedule</h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-1 line-clamp-1">The schedule for
+                                classes VI-X has been published.</p>
+                            <span class="text-slate-400 text-xs mt-1">2 days ago</span>
+                        </div>
+                    </div>
+                    <div onclick="window.location.href='Official Notices.html'"
+                        class="cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+                        <div
+                            class="flex flex-col items-center justify-center size-12 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 shrink-0">
+                            <span class="text-xs font-bold uppercase">Apr</span>
+                            <span class="text-lg font-bold leading-none">05</span>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <h4 class="text-slate-900 dark:text-white text-base font-semibold line-clamp-1">Science Fair
+                                Registration</h4>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-1 line-clamp-1">Last date for
+                                project submission is near.</p>
+                            <span class="text-slate-400 text-xs mt-1">5 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full items-center justify-center">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">Made with Adil-Dev</p>
+            </div>
+        </main>
+        <nav
+            class="fixed bottom-0 left-0 right-0 z-50 bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+            <div class="flex justify-around items-center h-16 max-w-md mx-auto">
+                <a class="flex flex-col items-center justify-center w-full h-full text-primary dark:text-blue-400 gap-1"
+                    href="Home Screen.html">
+                    <span class="material-symbols-outlined text-[24px] font-variation-settings-fill">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors"
+                    href="Official Notices.html">
+                    <span class="material-symbols-outlined text-[24px]">notifications</span>
+                    <span class="text-[10px] font-medium">Notices</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors"
+                    href="Class Messenger.html">
+                    <div class="relative">
+                        <span class="material-symbols-outlined text-[24px]">chat_bubble</span>
+                        <span
+                            class="absolute -top-0.5 -right-0.5 size-2 bg-red-500 rounded-full border border-white dark:border-surface-dark"></span>
+                    </div>
+                    <span class="text-[10px] font-medium">Messages</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 gap-1 transition-colors"
+                    href="Main Navigation Menu.html">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                    <span class="text-[10px] font-medium">Menu</span>
+                </a>
+            </div>
+        </nav>
+        <div class="h-6"></div>
+    </div>
+    <style>
+        .font-variation-settings-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</body>
+
+</html>

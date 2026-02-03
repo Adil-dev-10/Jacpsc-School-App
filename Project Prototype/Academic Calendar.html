@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Academic Calendar</title>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark min-h-screen font-display antialiased text-slate-900 dark:text-slate-100">
+    <div
+        class="relative flex h-full w-full max-w-md mx-auto flex-col overflow-x-hidden shadow-xl min-h-screen bg-background-light dark:bg-background-dark">
+        <!-- Top Navigation Bar -->
+        <header
+            class="sticky top-0 z-10 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 px-4 py-3 flex items-center justify-between">
+            <button onclick="window.location.href='Home Screen.html'"
+                class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-primary dark:text-blue-200">
+                <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+            </button>
+            <h1 class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">Academic Calendar</h1>
+            <div class="size-10"></div> <!-- Spacer for center alignment -->
+        </header>
+        <!-- Calendar Section -->
+        <div class="p-4">
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-4">
+                <!-- Month Selector -->
+                <div class="flex items-center justify-between mb-4">
+                    <button
+                        class="size-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-slate-600 dark:text-slate-300">
+                        <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                    </button>
+                    <h2 class="text-lg font-bold text-slate-900 dark:text-white">October 2023</h2>
+                    <button
+                        class="size-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-slate-600 dark:text-slate-300">
+                        <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                    </button>
+                </div>
+                <!-- Days of Week -->
+                <div class="grid grid-cols-7 mb-2">
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">S</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">M</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">T</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">W</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">T</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">F</div>
+                    <div class="text-center text-xs font-semibold text-slate-400 dark:text-slate-500 py-1">S</div>
+                </div>
+                <!-- Calendar Grid -->
+                <div class="grid grid-cols-7 gap-y-2">
+                    <!-- Empty Days Previous Month -->
+                    <div class="h-10"></div>
+                    <div class="h-10"></div>
+                    <div class="h-10"></div>
+                    <div class="h-10"></div>
+                    <!-- Days -->
+                    <!-- Day 1 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">1</span>
+                    </button>
+                    <!-- Day 2 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">2</span>
+                    </button>
+                    <!-- Day 3 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">3</span>
+                    </button>
+                    <!-- Day 4 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">4</span>
+                    </button>
+                    <!-- Day 5 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">5</span>
+                    </button>
+                    <!-- Day 6 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">6</span>
+                    </button>
+                    <!-- Day 7 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">7</span>
+                    </button>
+                    <!-- Day 8 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">8</span>
+                    </button>
+                    <!-- Day 9 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">9</span>
+                    </button>
+                    <!-- Day 10 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">10</span>
+                    </button>
+                    <!-- Day 11 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">11</span>
+                    </button>
+                    <!-- Day 12 with Event (Math Olympiad) -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-900 dark:text-slate-100 bg-primary/10 dark:bg-primary/30 font-bold">12</span>
+                        <span class="mt-1 size-1 rounded-full bg-blue-500"></span>
+                    </button>
+                    <!-- Day 13 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">13</span>
+                    </button>
+                    <!-- Day 14 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">14</span>
+                    </button>
+                    <!-- Day 15 with Event (Exam) -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-bold text-slate-900 dark:text-slate-100">15</span>
+                        <span class="mt-1 size-1 rounded-full bg-red-500"></span>
+                    </button>
+                    <!-- Day 16 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">16</span>
+                    </button>
+                    <!-- Day 17 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">17</span>
+                    </button>
+                    <!-- Day 18 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">18</span>
+                    </button>
+                    <!-- Day 19 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">19</span>
+                    </button>
+                    <!-- Day 20 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">20</span>
+                    </button>
+                    <!-- Day 21 with Event (Holiday) -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-white bg-primary shadow-md shadow-primary/30">21</span>
+                        <span class="mt-1 size-1 rounded-full bg-green-400"></span>
+                    </button>
+                    <!-- Day 22 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">22</span>
+                    </button>
+                    <!-- Day 23 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">23</span>
+                    </button>
+                    <!-- Day 24 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">24</span>
+                    </button>
+                    <!-- Day 25 - Today -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group relative">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-bold text-primary dark:text-blue-300 border border-primary/20 bg-primary/5 dark:bg-primary/20">25</span>
+                    </button>
+                    <!-- Day 26 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">26</span>
+                    </button>
+                    <!-- Day 27 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">27</span>
+                    </button>
+                    <!-- Day 28 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">28</span>
+                    </button>
+                    <!-- Day 29 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">29</span>
+                    </button>
+                    <!-- Day 30 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">30</span>
+                    </button>
+                    <!-- Day 31 -->
+                    <button class="h-10 w-full flex flex-col items-center justify-start group">
+                        <span
+                            class="size-8 flex items-center justify-center rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:bg-gray-100 dark:group-hover:bg-gray-800">31</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Section Header -->
+        <div class="px-5 pt-2 pb-2">
+            <div class="flex items-center justify-between">
+                <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Events in October</h3>
+                <span
+                    class="text-xs font-medium text-primary dark:text-blue-300 bg-primary/10 dark:bg-blue-900/40 px-2 py-1 rounded-full">3
+                    Events</span>
+            </div>
+        </div>
+        <!-- Event List -->
+        <div class="flex-1 px-4 space-y-3 pb-8">
+            <!-- Event Item 1: Selected (Durga Puja) -->
+            <!-- The user selected "21" in our logical flow, so let's highlight this one or just list them all chronologically -->
+            <!-- Event Card 1: Co-curricular -->
+            <div
+                class="group flex bg-surface-light dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-all gap-4">
+                <!-- Date Box -->
+                <div
+                    class="shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-xl text-primary dark:text-blue-200">
+                    <span class="text-[10px] font-bold uppercase tracking-wide opacity-80">Oct</span>
+                    <span class="text-xl font-bold leading-none">12</span>
+                </div>
+                <!-- Details -->
+                <div class="flex-1 flex flex-col justify-center min-w-0">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-semibold text-slate-900 dark:text-white truncate pr-2">Math Olympiad</h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                            Co-curricular
+                        </span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400 truncate">Main Auditorium</span>
+                    </div>
+                </div>
+                <!-- Arrow -->
+                <div class="flex items-center text-slate-300 dark:text-slate-600">
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </div>
+            </div>
+            <!-- Event Card 2: Exam -->
+            <div
+                class="group flex bg-surface-light dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-all gap-4">
+                <!-- Date Box -->
+                <div
+                    class="shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-red-50 dark:bg-red-900/20 rounded-xl text-red-700 dark:text-red-300">
+                    <span class="text-[10px] font-bold uppercase tracking-wide opacity-80">Oct</span>
+                    <span class="text-xl font-bold leading-none">15</span>
+                </div>
+                <!-- Details -->
+                <div class="flex-1 flex flex-col justify-center min-w-0">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-semibold text-slate-900 dark:text-white truncate pr-2">Term Final Exams Start
+                        </h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300">
+                            Exam
+                        </span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400 truncate">All Classes</span>
+                    </div>
+                </div>
+                <!-- Arrow -->
+                <div class="flex items-center text-slate-300 dark:text-slate-600">
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </div>
+            </div>
+            <!-- Event Card 3: Holiday (Selected Day Style) -->
+            <div
+                class="group relative flex bg-surface-light dark:bg-surface-dark p-3 rounded-2xl shadow-md border-l-4 border-l-primary dark:border-l-blue-400 border-y border-r border-gray-100 dark:border-gray-700 gap-4 transition-all">
+                <!-- Date Box -->
+                <div
+                    class="shrink-0 flex flex-col items-center justify-center w-14 h-14 bg-green-50 dark:bg-green-900/20 rounded-xl text-green-700 dark:text-green-300">
+                    <span class="text-[10px] font-bold uppercase tracking-wide opacity-80">Oct</span>
+                    <span class="text-xl font-bold leading-none">21</span>
+                </div>
+                <!-- Details -->
+                <div class="flex-1 flex flex-col justify-center min-w-0">
+                    <div class="flex justify-between items-start mb-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white truncate pr-2">Durga Puja Holiday</h4>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
+                            Holiday
+                        </span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400 truncate">School Closed</span>
+                    </div>
+                </div>
+                <!-- Arrow -->
+                <div class="flex items-center text-primary dark:text-blue-300">
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </div>
+            </div>
+            <!-- Empty state illustration placeholder (commented out as per instructions not to use external images unless needed, but handled logically via no-data case if list was empty) -->
+            <div class="h-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

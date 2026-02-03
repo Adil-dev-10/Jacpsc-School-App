@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JACPSC Book List</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+        <div class="sticky top-0 z-50 flex items-center bg-primary px-4 py-3 justify-between shadow-md">
+            <div onclick="window.location.href='Home Screen.html'"
+                class="text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 cursor-pointer">
+                <span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Book List</h2>
+            <div class="flex w-10 items-center justify-end">
+                <button
+                    class="flex items-center justify-center rounded-full size-10 hover:bg-white/10 text-white cursor-pointer">
+                    <span class="material-symbols-outlined text-2xl">tune</span>
+                </button>
+            </div>
+        </div>
+        <div
+            class="bg-white dark:bg-[#1a2634] px-4 py-5 shadow-sm sticky top-[60px] z-40 border-b border-slate-100 dark:border-slate-800">
+            <label class="flex flex-col w-full">
+                <p
+                    class="text-primary dark:text-slate-200 text-sm font-semibold leading-normal pb-2 uppercase tracking-wide">
+                    Select Class</p>
+                <div class="relative">
+                    <select
+                        class="appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-slate-600 bg-background-light dark:bg-background-dark h-12 px-4 text-base font-normal leading-normal transition-shadow">
+                        <option value="9">Class 9 (Science)</option>
+                        <option value="8">Class 8</option>
+                        <option value="7">Class 7</option>
+                        <option value="6">Class 6</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="px-4 py-4 flex flex-col gap-4">
+            <div class="flex items-center justify-between pt-2">
+                <h3 class="text-primary dark:text-white tracking-tight text-xl font-bold leading-tight">Required
+                    Textbooks</h3>
+                <span
+                    class="text-xs font-medium bg-primary/10 dark:bg-blue-900/30 text-primary dark:text-blue-200 px-2 py-1 rounded-full">12
+                    Books</span>
+            </div>
+            <div
+                class="group relative flex gap-4 bg-white dark:bg-[#1a2634] p-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="flex items-start gap-4 flex-1">
+                    <div
+                        class="relative shrink-0 overflow-hidden rounded-lg w-[80px] aspect-[2/3] shadow-inner bg-slate-100 dark:bg-slate-800">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="English Literature Textbook Cover Blue"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR2MuoH9Zsl4z3cH8SzEVTJWDJgbwlC1wZdqdUaJ3cw_4Y5oT_GMz-btmWRlQGtz_LXXTn9XuhGrv5F2q5jwqbb3hnfemHzSu0ST1wDruJuXY1y9NflnrCHtDttCiNncRnn_WQJCEH4Sm8QZnPu4vLWZ7_LliK4ikPlGPQh9Fan82W7nVgLBYSHRV9SnmPkel9yNcJTaiCAubgBH1ylskOfnDof8ggm2C15GvVYHmcYhyYnOVAwn4p5jvmGpS2Qw_3ioP2wC7_AknB");'>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-start h-full py-1">
+                        <div class="flex items-start justify-between">
+                            <span
+                                class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/20 px-2 py-0.5 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10 mb-2">English</span>
+                        </div>
+                        <h4 class="text-primary dark:text-white text-base font-bold leading-snug line-clamp-2 mb-1">
+                            Oxford Reading Circle</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Nicholas
+                            Horsburgh</p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs mt-auto pt-2">Oxford University Press</p>
+                    </div>
+                </div>
+                <div class="shrink-0 flex flex-col justify-between items-end">
+                    <button class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <span class="material-symbols-outlined">bookmark_border</span>
+                    </button>
+                    <span
+                        class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full">REQUIRED</span>
+                </div>
+            </div>
+            <div
+                class="group relative flex gap-4 bg-white dark:bg-[#1a2634] p-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="flex items-start gap-4 flex-1">
+                    <div
+                        class="relative shrink-0 overflow-hidden rounded-lg w-[80px] aspect-[2/3] shadow-inner bg-slate-100 dark:bg-slate-800">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="Mathematics Textbook Cover Geometric"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAecLDj4RtsOxW4-XwI79MHiYWVWJZ_BMA3bnImmqPq2h9UmbxXATjYnxKJOUdu5VQU7merpl-Ky6Rm5tslk1Qb_AeH7TMYXAUHsI4eTmfLW3PZaCQEJCxtZAxTZhGFLyezeKTgL6FVUClcCn5jUk0_wiDDUcX9somOm9_9zTp547leC8DiUM3qYUe9ppK0DEsD_5iy5MRrjuW5C5Ez-imD0RYch4WyGKK5JW5FUCyx5r2TGyDiH78UKIIlrwVoiXKlF-KACJuSf6rg");'>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-start h-full py-1">
+                        <div class="flex items-start justify-between">
+                            <span
+                                class="inline-flex items-center rounded-md bg-orange-50 dark:bg-orange-900/20 px-2 py-0.5 text-xs font-medium text-orange-700 dark:text-orange-300 ring-1 ring-inset ring-orange-700/10 mb-2">Mathematics</span>
+                        </div>
+                        <h4 class="text-primary dark:text-white text-base font-bold leading-snug line-clamp-2 mb-1">
+                            Higher Mathematics</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Dr. M. A. Jalil
+                        </p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs mt-auto pt-2">Approved by NCTB</p>
+                    </div>
+                </div>
+                <div class="shrink-0 flex flex-col justify-between items-end">
+                    <button class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <span class="material-symbols-outlined">bookmark_border</span>
+                    </button>
+                    <span
+                        class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full">REQUIRED</span>
+                </div>
+            </div>
+            <div
+                class="group relative flex gap-4 bg-white dark:bg-[#1a2634] p-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="flex items-start gap-4 flex-1">
+                    <div
+                        class="relative shrink-0 overflow-hidden rounded-lg w-[80px] aspect-[2/3] shadow-inner bg-slate-100 dark:bg-slate-800">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Physics Textbook Cover Abstract Science"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAml51oq2hd9Hi9KrnpuNIEmw-A4oJrxzqdr2rIrpCsN4UZH3IovNN-qd4nDT8iltzFh8-63zcwmjyWZc8GXtue_kWmEqXgasKDVTROETEH5p_fck3g9ASnjo-9JWkeiuxqDD7u2yGAa1x-jAQQ8SBKohpijAAhq6qOa_2actdS3VwxkiNMeuB_f1d0iu7HyPY6aQpaF2sspikiTUKXC33xf2cPP0G8-08GzjQbjcNn2wSmJ4K7x5r-QxaLjNFBvUXB91AMqZVbtcU0");'>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-start h-full py-1">
+                        <div class="flex items-start justify-between">
+                            <span
+                                class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-900/20 px-2 py-0.5 text-xs font-medium text-purple-700 dark:text-purple-300 ring-1 ring-inset ring-purple-700/10 mb-2">Physics</span>
+                        </div>
+                        <h4 class="text-primary dark:text-white text-base font-bold leading-snug line-clamp-2 mb-1">
+                            Secondary Physics</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Dr. Shahjahan
+                            Tapan</p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs mt-auto pt-2">Hassan Book House</p>
+                    </div>
+                </div>
+                <div class="shrink-0 flex flex-col justify-between items-end">
+                    <button class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <span class="material-symbols-outlined">bookmark_border</span>
+                    </button>
+                    <span
+                        class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full">REQUIRED</span>
+                </div>
+            </div>
+            <div
+                class="group relative flex gap-4 bg-white dark:bg-[#1a2634] p-3 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary/50 dark:hover:border-blue-500/50 transition-all">
+                <div class="flex items-start gap-4 flex-1">
+                    <div
+                        class="relative shrink-0 overflow-hidden rounded-lg w-[80px] aspect-[2/3] shadow-inner bg-slate-100 dark:bg-slate-800">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="Chemistry Textbook Cover Molecules"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBexd0PoP9bF8B4SGEKgiExVjmH41K2sh6iPOCCtyflhplMLvfQ3N8aOw1ULwPdxO-MYRaTP6KTeNJfwD_21TPdR-AlHdjPlwXPi-hh955cyeolYZoyRb-1XMQFSWIPrSC_bVxfDoXiOe0nt-LKovrpnA_zbx3Jb-ZRgDz4EC15uT47dllgaWvm7YX7MqTIWVkIS9ROQeP00YnjDxM9bqn7-xqdxrk51T3yfIG2RtEISPzOiUd4fU5iBX7ZvjqYHM9u2vQwEaXcV3pO");'>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-start h-full py-1">
+                        <div class="flex items-start justify-between">
+                            <span
+                                class="inline-flex items-center rounded-md bg-pink-50 dark:bg-pink-900/20 px-2 py-0.5 text-xs font-medium text-pink-700 dark:text-pink-300 ring-1 ring-inset ring-pink-700/10 mb-2">Chemistry</span>
+                        </div>
+                        <h4 class="text-primary dark:text-white text-base font-bold leading-snug line-clamp-2 mb-1">
+                            Advanced Chemistry</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Hajara &amp;
+                            Kabir</p>
+                        <p class="text-slate-400 dark:text-slate-500 text-xs mt-auto pt-2">Approved by NCTB</p>
+                    </div>
+                </div>
+                <div class="shrink-0 flex flex-col justify-between items-end">
+                    <button class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors">
+                        <span class="material-symbols-outlined">bookmark_border</span>
+                    </button>
+                    <span
+                        class="text-[10px] font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">OPTIONAL</span>
+                </div>
+            </div>
+            <div class="py-6 text-center">
+                <p class="text-sm text-slate-400">Showing 4 of 12 books</p>
+            </div>
+        </div>
+        <button
+            class="fixed bottom-24 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg shadow-blue-900/20 text-white hover:bg-[#003366] active:scale-95 transition-all">
+            <span class="material-symbols-outlined">download</span>
+        </button>
+        <div
+            class="fixed bottom-0 z-50 w-full bg-white dark:bg-[#1a2634] border-t border-slate-200 dark:border-slate-800 pb-safe">
+            <div class="flex items-center justify-around h-16">
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary dark:hover:text-white transition-colors gap-1"
+                    href="Home Screen.html">
+                    <span class="material-symbols-outlined text-2xl">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary dark:hover:text-white transition-colors gap-1"
+                    href="Official Notices.html">
+                    <span class="material-symbols-outlined text-2xl">notifications</span>
+                    <span class="text-[10px] font-medium">Notices</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary dark:hover:text-white transition-colors gap-1"
+                    href="Class Messenger.html">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                    <span class="text-[10px] font-medium">Messages</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary dark:hover:text-white transition-colors gap-1"
+                    href="Main Navigation Menu.html">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                    <span class="text-[10px] font-medium">Menu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

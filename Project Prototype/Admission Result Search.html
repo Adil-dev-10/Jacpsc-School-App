@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admission Result Search</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2633",
+                        "text-main-light": "#101418",
+                        "text-main-dark": "#e2e8f0",
+                        "text-sec-light": "#5e748d",
+                        "text-sec-dark": "#94a3b8",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-display min-h-screen flex flex-col antialiased selection:bg-primary/20">
+    <!-- Top App Bar -->
+    <div
+        class="sticky top-0 z-50 flex items-center bg-surface-light dark:bg-surface-dark p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800 shadow-sm">
+        <button onclick="window.location.href='Home Screen.html'"
+            class="text-text-main-light dark:text-text-main-dark flex size-12 shrink-0 items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+            <span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+        </button>
+        <h2
+            class="text-text-main-light dark:text-text-main-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+            Admission Results
+        </h2>
+    </div>
+    <div class="flex-1 flex flex-col w-full max-w-md mx-auto pb-8">
+        <!-- Header Image / Branding -->
+        <div class="@container">
+            <div class="@[480px]:px-4 @[480px]:py-3 pt-4 px-4">
+                <div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-gray-200 dark:bg-gray-700 rounded-xl min-h-[180px] shadow-sm relative group"
+                    data-alt="Modern school campus building with blue sky background"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJ9rf60b0vSjkEB6gzOAXlIrvcre8-rIsBMQNyiO_Ula04GEh80PGL5psA6fs28tSV3Hp37PsKF11j2avacYcXjpK1O9ihU4Ml8E34MUNinVtxVhd5Z9Olp8jmSwcRkt1a1jcGsR1fqrioziQx2PjRff_ts_VlylNRNRZzPiUWDnhEX5k685YVlh4-A8mFrmMGYZ_0j3fMY_DFEGp52utKt33gru-5JCwgGr6zJRQ-OfIfvZmvr0dAIMfxzCKijtTwx0pxXcEq2ayk");'>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="relative z-10 p-4">
+                        <div
+                            class="bg-white/90 dark:bg-black/60 backdrop-blur-sm rounded-lg p-2 inline-flex items-center gap-2 mb-1">
+                            <span class="material-symbols-outlined text-primary dark:text-blue-400">school</span>
+                            <span
+                                class="text-xs font-bold text-primary dark:text-blue-100 uppercase tracking-wide">JACPSC</span>
+                        </div>
+                        <h3 class="text-white font-bold text-xl drop-shadow-md">Session 2024-2025</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Form Section -->
+        <div class="px-4 pt-4">
+            <h1 class="text-primary dark:text-white text-2xl font-bold leading-tight tracking-tight text-center pb-2">
+                Check Admission Status
+            </h1>
+            <p
+                class="text-text-sec-light dark:text-text-sec-dark text-base font-normal leading-normal pb-6 text-center">
+                Enter your Roll Number or Application ID below to view your result.
+            </p>
+            <div class="space-y-4">
+                <label class="flex flex-col w-full group">
+                    <span
+                        class="text-text-main-light dark:text-text-main-dark text-sm font-semibold leading-normal pb-2 ml-1">
+                        Roll or Application ID
+                    </span>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-text-sec-light dark:text-text-sec-dark">tag</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-main-light dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:focus:ring-blue-500/50 border border-[#dae0e7] dark:border-gray-700 bg-surface-light dark:bg-surface-dark focus:border-primary dark:focus:border-blue-500 h-14 placeholder:text-text-sec-light dark:placeholder:text-gray-500 pl-11 pr-4 text-base font-medium leading-normal shadow-sm transition-all"
+                            inputmode="numeric" placeholder="Ex: 2024001" type="text" value="1205" />
+                    </div>
+                </label>
+                <button
+                    class="w-full h-14 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] focus:ring-4 focus:ring-primary/20">
+                    <span class="material-symbols-outlined">search</span>
+                    Check Result
+                </button>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="py-8 flex items-center justify-center gap-4 opacity-50">
+            <div class="h-px bg-gray-300 dark:bg-gray-700 w-16"></div>
+            <span class="text-xs font-medium uppercase text-gray-400">Search Result</span>
+            <div class="h-px bg-gray-300 dark:bg-gray-700 w-16"></div>
+        </div>
+        <!-- Result Card (Simulated Success State) -->
+        <div class="px-4 animate-in slide-in-from-bottom-4 fade-in duration-700">
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden relative">
+                <!-- Decorative Top Border -->
+                <div class="h-2 w-full bg-green-500"></div>
+                <div class="p-6">
+                    <!-- Status Header -->
+                    <div class="flex flex-col items-center text-center mb-6">
+                        <div
+                            class="size-16 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-3">
+                            <span
+                                class="material-symbols-outlined text-green-600 dark:text-green-400 text-3xl">celebration</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Congratulations!
+                        </h3>
+                        <div
+                            class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-bold border border-green-200 dark:border-green-800">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            Selected
+                        </div>
+                    </div>
+                    <!-- Candidate Details -->
+                    <div
+                        class="bg-background-light dark:bg-gray-800/50 rounded-xl p-4 mb-6 space-y-3 border border-gray-200 dark:border-gray-700">
+                        <div
+                            class="flex justify-between items-center border-b border-dashed border-gray-300 dark:border-gray-600 pb-2">
+                            <span class="text-text-sec-light dark:text-text-sec-dark text-sm">Student Name</span>
+                            <span class="text-text-main-light dark:text-text-main-dark font-bold">Sadia Rahman</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center border-b border-dashed border-gray-300 dark:border-gray-600 pb-2">
+                            <span class="text-text-sec-light dark:text-text-sec-dark text-sm">Roll Number</span>
+                            <span class="text-text-main-light dark:text-text-main-dark font-bold font-mono">1205</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center border-b border-dashed border-gray-300 dark:border-gray-600 pb-2">
+                            <span class="text-text-sec-light dark:text-text-sec-dark text-sm">Group</span>
+                            <span class="text-text-main-light dark:text-text-main-dark font-bold">Science</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-text-sec-light dark:text-text-sec-dark text-sm">Class</span>
+                            <span class="text-text-main-light dark:text-text-main-dark font-bold">XI</span>
+                        </div>
+                    </div>
+                    <!-- Actions -->
+                    <div class="grid gap-3">
+                        <button
+                            class="w-full py-3 px-4 bg-primary/10 dark:bg-blue-900/20 hover:bg-primary/20 dark:hover:bg-blue-900/30 text-primary dark:text-blue-300 font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors border border-primary/10 dark:border-blue-800/50">
+                            <span class="material-symbols-outlined">description</span>
+                            Admission Guidelines
+                        </button>
+                        <button
+                            class="w-full py-3 px-4 bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800 text-text-sec-light dark:text-text-sec-dark font-medium rounded-lg text-sm transition-colors">
+                            Download Result PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div
+        class="p-6 text-center border-t border-gray-200 dark:border-gray-800 bg-surface-light dark:bg-surface-dark mt-auto">
+        <p class="text-sm text-text-sec-light dark:text-text-sec-dark mb-2">Need assistance with your result?</p>
+        <a class="text-primary dark:text-blue-400 font-semibold text-sm inline-flex items-center gap-1 hover:underline"
+            href="#">
+            <span class="material-symbols-outlined text-[18px]">support_agent</span>
+            Contact Helpline
+        </a>
+    </div>
+</body>
+
+</html>

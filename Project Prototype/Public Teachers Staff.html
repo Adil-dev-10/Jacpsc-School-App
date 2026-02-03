@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Teachers &amp; Staff - JACPSC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "primary-light": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#101418] dark:text-white font-display overflow-x-hidden antialiased">
+    <div class="relative flex flex-col min-h-screen w-full pb-20">
+        <header
+            class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 shadow-sm">
+            <div class="flex items-center p-4 justify-between">
+                <button onclick="window.location.href='Public Landing Home.html'"
+                    class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-primary dark:text-white">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                </button>
+                <h2
+                    class="text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">
+                    Teachers &amp; Staff
+                </h2>
+            </div>
+            <div class="px-4 pb-3">
+                <label class="flex flex-col min-w-40 h-12 w-full">
+                    <div
+                        class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden shadow-sm ring-1 ring-gray-200 dark:ring-gray-700">
+                        <div
+                            class="text-gray-400 dark:text-gray-500 flex border-none bg-background-light dark:bg-background-dark items-center justify-center pl-4 pr-2">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-primary dark:text-white focus:outline-0 focus:ring-0 border-none bg-background-light dark:bg-background-dark focus:border-none h-full placeholder:text-gray-400 px-2 text-base font-normal leading-normal"
+                            placeholder="Search by name or department..." value="" />
+                        <div
+                            class="text-primary dark:text-blue-400 flex border-none bg-background-light dark:bg-background-dark items-center justify-center pr-4 pl-2 cursor-pointer">
+                            <span class="material-symbols-outlined">tune</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </header>
+        <div
+            class="sticky top-[105px] z-40 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm pt-3 pb-2 border-b border-gray-100 dark:border-gray-800">
+            <div class="flex gap-3 px-4 overflow-x-auto no-scrollbar">
+                <button
+                    class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 shadow-sm transition-transform active:scale-95">
+                    <p class="text-sm font-medium leading-normal">All</p>
+                </button>
+                <button
+                    class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:bg-surface-dark dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 transition-colors">
+                    <p class="text-primary dark:text-gray-200 text-sm font-medium leading-normal">Administration</p>
+                </button>
+                <button
+                    class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:bg-surface-dark dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 transition-colors">
+                    <p class="text-primary dark:text-gray-200 text-sm font-medium leading-normal">Science</p>
+                </button>
+                <button
+                    class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:bg-surface-dark dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 transition-colors">
+                    <p class="text-primary dark:text-gray-200 text-sm font-medium leading-normal">Arts</p>
+                </button>
+                <button
+                    class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 dark:bg-surface-dark dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 transition-colors">
+                    <p class="text-primary dark:text-gray-200 text-sm font-medium leading-normal">Support</p>
+                </button>
+            </div>
+        </div>
+        <main class="flex-1 px-4 py-2 space-y-6">
+            <section>
+                <h3
+                    class="text-primary dark:text-blue-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3 pt-4 sticky top-[150px] bg-background-light dark:bg-background-dark z-30">
+                    Administration</h3>
+                <div class="flex flex-col gap-3">
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Dr. Md. Rafiqul Islam, a professional man in a suit"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwUxFQxDx7MpvyopUrbON50lgaxGFD1nHWPJkW8m0IUvY0UU4aQcTUyi3HP0n9_SzhGPk02bO7XQT9g3GRohg8nAztYWd8i_dj-v8uwbgxwdWz4OrwDUZnPWS7h4Czgv11waealh3D0R-xXifuif_f1eEpt_zKaosGmMq8BAkHoYknbZ3v7oobZNWTqEaR2mGqs0ymV_w140y3G45_8P45hQ2RR38dYIEDKFjUVTrIhr74R2JKRUooR6F_qPUYjlv5ZrHJpwt1esjn");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Dr.
+                                Md. Rafiqul
+                                Islam</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Principal</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </button>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Mrs. Salma Begum, a professional woman in a saree"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCV8vlPxDGHJGtF7Ty1HKZrA0ETDU-YNJcBu4egT7zvPg44iTJECyLTLWGmfZvI8Fx5vcMgFfyCL404zmilelT6G20XmvwBrKYVFPnD6jHR0tBzkJM00NA3sKLIk8n28ESNl7oKJKNpNfr-DlMstXR4I0mE3Yb2MIkb6UzxbLq0GV_rNg9tNuqhABgidWUcGHKKVg71QJ9KiddWhjb6_5KyJR46JncFmBwON6spEZHDnZWyeZwURYix1BiZrrj9ztI8UKAvk67Dx9zX");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Mrs.
+                                Salma Begum
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">Vice
+                                Principal</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">mail</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3
+                    class="text-primary dark:text-blue-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3 pt-4 sticky top-[150px] bg-background-light dark:bg-background-dark z-30">
+                    Science Department</h3>
+                <div class="flex flex-col gap-3">
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Mr. Ahmed Khan, a physics teacher"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgcEeNDB3UU4VgewfvEGjU47_LSEbshb_whcl-XGJT9e4D9B3o5kghlIwIL93P2th3cLdfNJsvGsxCNX-OQ5_d2cEIKJl4PLdtHzlW7uQ4cpFw1D7msU4EmVOGZaa-dgOV_qXC_y1tYyNpOdpO_dW9G0av3ofq0t87PkQX1G2o8uafMqCoSdylkwxY90HpH-0Ek3hqMg4LWtLMeTNQnWCgtzTtKbZqurATdGvT-UAN510NKLY7AshEibnNVuLCbMAiyv83m0FBmTHP");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Mr.
+                                Ahmed Khan</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Senior Lecturer,
+                                Physics</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </button>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div
+                            class="flex items-center justify-center rounded-full h-14 w-14 shrink-0 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-lg font-bold">
+                            FK
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Ms.
+                                Farhana Karim
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Lecturer,
+                                Chemistry</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">mail</span>
+                        </button>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Dr. Anisur Rahman, biology professor"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCB1qOm5td2azmSb3GbJzRlO7pdBGJgTOkTa4Lrv0VPsTWYNb4Hs94gxtRU-HWg0OJLxbudHZZhel_AdAeu7CBBRHVnPcB8DoqMhXpkCX0CSKp67V-kRYAP4WahH1sPuMZo900dXF4m57k6AIpzqf6xGMtoV-zMujUt8ZAEENNOLRULQ0WU-5auhnPqKdTTxZ9jMGZSBN4l3dXmadi11hFrHPzBEtwdGNWXItE-EFV59ssXSLu1NTQsdYDKJ6DoP1g72Piv1ycn7F_Y");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Dr.
+                                Anisur Rahman
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Asst. Professor,
+                                Biology</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3
+                    class="text-primary dark:text-blue-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3 pt-4 sticky top-[150px] bg-background-light dark:bg-background-dark z-30">
+                    Arts &amp; Humanities</h3>
+                <div class="flex flex-col gap-3">
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Sarah Jenkins, English teacher"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkJVRLluBfar6ol9ZK7KC6_r0TfygFEZQRnqsCHtzU07sfbsd5SBJ65-jzVDCPghbWZkYHsRI4hXKITBfPsgowjx6YQVuBS-2ycsQMUhX-tcKFw7yKYANbJUuvgIhKZ9qEY3rR2fLau-4vY0AOu85Kh3cAuDIZVKIlIKf5BkMNjTA7Zdc9z9iPuRzKII5G_VQAIeEFbbiFB-3BOIT1nvDfMDbq-_lV1DkUfe7gdH9QdiUvK0tPsCQLhIBt6cJp-nU2mZmJy0XDkvY-");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Mrs.
+                                Sarah Jenkins
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Lecturer, English
+                                Literature</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">mail</span>
+                        </button>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0 shadow-inner"
+                            data-alt="Portrait of Mr. Hasan Mahmud, History teacher"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf1NI95ba99hGehw7jsfbV2R_N4g4KoCO3S7Ohf-KCQ6NzMKsnxmajLmOHpocxUhXnms2nmhtiklr09e2JI4bMjYA-IeyFjQKBjjyfQJow1lr4TfCfuYdoXoNcJ3lR7LNqbKojqJN0CAUBdCWNyBHSUhBpo26aTny5T_vXxTHu33Th4Ojpd7Ne3d4i_de822JtroKS03VHVLcyLfPOc9HQx-j0S2RCdnASll99GNAoBDZKKyZbXIKQv6D71xpSDG3tof76wmWOoV_7");'>
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Mr.
+                                Hasan Mahmud
+                            </p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Senior Teacher,
+                                History</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3
+                    class="text-primary dark:text-blue-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3 pt-4 sticky top-[150px] bg-background-light dark:bg-background-dark z-30">
+                    Support Staff</h3>
+                <div class="flex flex-col gap-3">
+                    <div
+                        class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 active:bg-gray-50 dark:active:bg-gray-800 transition-colors cursor-pointer">
+                        <div
+                            class="flex items-center justify-center rounded-full h-14 w-14 shrink-0 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-lg font-bold">
+                            MO
+                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+                            <p class="text-primary dark:text-white text-base font-semibold leading-normal truncate">Mr.
+                                Mokhlesur
+                                Rahman</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">
+                                Office
+                                Superintendent</p>
+                        </div>
+                        <button
+                            class="shrink-0 size-10 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <nav
+            class="fixed bottom-0 left-0 right-0 z-50 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pb-safe">
+            <div class="flex items-center justify-around h-16">
+                <a class="flex flex-col items-center justify-center w-full h-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white group"
+                    href="Public Landing Home.html">
+                    <span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white group"
+                    href="Public School Gallery.html">
+                    <span
+                        class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">gallery_thumbnail</span>
+                    <span class="text-[10px] font-medium">Gallery</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white group"
+                    href="Public Notice Board.html">
+                    <span
+                        class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">campaign</span>
+                    <span class="text-[10px] font-medium">Notices</span>
+                </a>
+                <a class="flex flex-col items-center justify-center w-full h-full text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white group"
+                    href="Public About Us.html">
+                    <span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">info</span>
+                    <span class="text-[10px] font-medium">About</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

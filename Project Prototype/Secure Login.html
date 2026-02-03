@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JACPSC Student Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#300047",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1d0f23",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-[#161018] dark:text-white">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden items-center justify-center p-4">
+        <!-- Header / Navigation (Minimal) -->
+        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-4 z-10">
+            <button
+                class="flex items-center justify-center rounded-full p-2 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+                <span class="material-symbols-outlined text-primary dark:text-white"
+                    style="font-size: 24px;">arrow_back</span>
+            </button>
+            <div class="text-sm font-medium text-gray-500 dark:text-gray-400">JACPSC Portal v2.4</div>
+        </div>
+        <!-- Main Card Container -->
+        <div class="w-full max-w-[400px] flex flex-col gap-6 z-10">
+            <!-- Logo and Branding -->
+            <div class="flex flex-col items-center justify-center gap-4 pt-8">
+                <div
+                    class="size-24 rounded-2xl bg-white dark:bg-white/10 shadow-sm p-4 flex items-center justify-center relative overflow-hidden">
+                    <!-- Placeholder for school logo -->
+                    <div class="absolute inset-0 bg-center bg-contain bg-no-repeat m-3"
+                        data-alt="JACPSC School Logo badge" style='background-image: url("Jamuna.png");'>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold tracking-tight text-primary dark:text-white">JACPSC</h1>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Jamuna Cantonment Public School &amp;
+                        College</p>
+                </div>
+            </div>
+            <!-- Welcome Text -->
+            <div class="text-center pb-2">
+                <h2 class="text-3xl font-bold text-primary dark:text-white tracking-tight">Welcome Back</h2>
+                <p class="text-gray-500 dark:text-gray-400 mt-2">Please log in to continue</p>
+            </div>
+            <!-- Segmented Control -->
+            <div class="w-full">
+                <div class="flex p-1 bg-gray-200/50 dark:bg-white/10 rounded-xl relative">
+                    <label class="flex-1 cursor-pointer">
+                        <input checked="" class="peer sr-only" name="user_type" type="radio" value="student" />
+                        <div
+                            class="w-full py-2.5 text-sm font-medium text-gray-500 dark:text-gray-400 text-center rounded-lg peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all duration-200">
+                            Student
+                        </div>
+                    </label>
+                    <label class="flex-1 cursor-pointer">
+                        <input class="peer sr-only" name="user_type" type="radio" value="teacher" />
+                        <div
+                            class="w-full py-2.5 text-sm font-medium text-gray-500 dark:text-gray-400 text-center rounded-lg peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all duration-200">
+                            Teacher
+                        </div>
+                    </label>
+                    <label class="flex-1 cursor-pointer">
+                        <input class="peer sr-only" name="user_type" type="radio" value="staff" />
+                        <div
+                            class="w-full py-2.5 text-sm font-medium text-gray-500 dark:text-gray-400 text-center rounded-lg peer-checked:bg-white dark:peer-checked:bg-primary peer-checked:text-primary dark:peer-checked:text-white peer-checked:shadow-sm transition-all duration-200">
+                            Staff
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Form Fields -->
+            <form class="flex flex-col gap-4">
+                <!-- Student ID Input -->
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-sm font-semibold text-primary dark:text-gray-200 ml-1">Student ID</label>
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-gray-400 group-focus-within:text-primary dark:group-focus-within:text-white transition-colors">badge</span>
+                        </div>
+                        <input
+                            class="block w-full rounded-xl border-gray-200 bg-white dark:bg-white/5 dark:border-white/10 py-3.5 pl-10 pr-4 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-primary sm:text-sm sm:leading-6 shadow-sm transition-all"
+                            placeholder="Enter your Student ID" type="text" />
+                    </div>
+                </div>
+                <!-- Password Input -->
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-sm font-semibold text-primary dark:text-gray-200 ml-1">Password</label>
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-gray-400 group-focus-within:text-primary dark:group-focus-within:text-white transition-colors">lock</span>
+                        </div>
+                        <input
+                            class="block w-full rounded-xl border-gray-200 bg-white dark:bg-white/5 dark:border-white/10 py-3.5 pl-10 pr-10 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-primary sm:text-sm sm:leading-6 shadow-sm transition-all"
+                            placeholder="••••••••" type="password" />
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer">
+                            <span
+                                class="material-symbols-outlined text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">visibility_off</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Forgot Password -->
+                <div class="flex justify-end">
+                    <a class="text-sm font-medium text-primary dark:text-white/80 hover:underline hover:text-primary/80"
+                        href="#">Forgot Password?</a>
+                </div>
+                <!-- Login Button -->
+                <button onclick="window.location.href='Home Screen.html'"
+                    class="mt-4 flex w-full items-center justify-center rounded-xl bg-primary px-3 py-4 text-sm font-bold leading-6 text-white shadow-lg hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all active:scale-[0.98]"
+                    type="button">
+                    Log In
+                </button>
+                <!-- Biometric Login Option -->
+                <button
+                    class="flex w-full items-center justify-center gap-2 rounded-xl border border-transparent bg-primary/5 dark:bg-white/5 px-3 py-3 text-sm font-medium text-primary dark:text-white hover:bg-primary/10 dark:hover:bg-white/10 transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">face</span>
+                    Login with Face ID
+                </button>
+            </form>
+            <div class="mt-4 flex justify-center text-sm text-gray-500 dark:text-gray-400">
+                <p>Need help? <a class="font-semibold text-primary dark:text-white hover:underline" href="#">Contact
+                        Admin</a></p>
+            </div>
+        </div>
+        <!-- Decorative background elements -->
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+    </div>
+</body>
+
+</html>

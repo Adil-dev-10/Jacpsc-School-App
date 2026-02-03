@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Profile - JACPSC</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#210047",
+                        "primary-dark": "#002147",
+                        "accent": "#7045a1",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#180f23",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#2a1f3d",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(33, 0, 71, 0.08)',
+                        'card': '0 2px 8px -1px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#140c1d] dark:text-white min-h-screen flex flex-col relative pb-[80px]">
+    <!-- Header Section -->
+    <header
+        class="relative bg-gradient-to-br from-[#002147] to-[#210047] rounded-b-[2.5rem] pt-safe-top pb-10 shadow-lg overflow-hidden group/header">
+        <!-- Decorative pattern overlay -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 20% 150%, rgba(255,255,255,0.3) 0%, transparent 50%), radial-gradient(circle at 80% -50%, rgba(255,255,255,0.3) 0%, transparent 50%);">
+        </div>
+        <!-- Top App Bar -->
+        <div class="relative z-10 flex items-center justify-between px-6 pt-6 pb-4">
+            <button onclick="window.location.href='Home Screen.html'"
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-colors">
+                <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+            </button>
+            <h2 class="text-white text-lg font-bold tracking-tight">Student Profile</h2>
+            <button onclick="window.location.href='Settings.html'"
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-colors">
+                <span class="material-symbols-outlined text-[24px]">settings</span>
+            </button>
+        </div>
+        <!-- Profile Content -->
+        <div class="relative z-10 flex flex-col items-center mt-2 px-6">
+            <div class="relative group">
+                <div class="w-32 h-32 rounded-full border-[4px] border-white/20 shadow-xl bg-cover bg-center overflow-hidden"
+                    data-alt="Portrait of student Sadman Sakib"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8TXZ6-KafNlvJyO16cw0Lnyj7Jdb-0MxkWte5r9UIf6Szpbdq_Z4GDFUJ7K-sJP_bcuJRiczwji7YGH0eJz_dF7L3yNN6fBiK4BbY3vJrTfCgpsKK6CXVeJVik5dK04RanvJdNIYzpOpM3jgY0d0RYg48ek3gY2vjYjvlDaAU2MDytl82dpG8l3maGqchesK7tAZMyuNDAW8E-ptBn-SKbtGwLbr9SJYtueFgtIJEEAfIufQwSsXX-NlMpqlieCKAyDhJ7dJ3Cmh8');">
+                </div>
+                <!-- Status indicator -->
+                <div class="absolute bottom-2 right-2 w-5 h-5 bg-green-400 rounded-full border-[3px] border-[#210047]">
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <h1 class="text-2xl font-bold text-white leading-tight">Sadman Sakib</h1>
+                <div
+                    class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/10 backdrop-blur-md">
+                    <span class="material-symbols-outlined text-white/80 text-[16px]">badge</span>
+                    <span class="text-white/90 text-sm font-medium tracking-wide">ID: 20234591</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Container -->
+    <main class="flex-1 px-5 -mt-8 relative z-20 flex flex-col gap-5">
+        <!-- Quick Actions Row -->
+        <div class="grid grid-cols-2 gap-4">
+            <button
+                class="flex flex-col items-center justify-center gap-2 bg-surface-light dark:bg-surface-dark p-4 rounded-2xl shadow-soft hover:shadow-lg transition-all active:scale-95 group">
+                <div
+                    class="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-primary dark:text-indigo-300 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">id_card</span>
+                </div>
+                <span class="text-sm font-semibold text-gray-700 dark:text-gray-200">Digital ID</span>
+            </button>
+            <button
+                class="flex flex-col items-center justify-center gap-2 bg-surface-light dark:bg-surface-dark p-4 rounded-2xl shadow-soft hover:shadow-lg transition-all active:scale-95 group">
+                <div
+                    class="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-primary dark:text-indigo-300 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">edit_square</span>
+                </div>
+                <span class="text-sm font-semibold text-gray-700 dark:text-gray-200">Edit Profile</span>
+            </button>
+        </div>
+        <!-- Academic Info Card -->
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-card overflow-hidden">
+            <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center gap-3">
+                <div class="p-1.5 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
+                    <span class="material-symbols-outlined text-[20px]">school</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Academic Info</h3>
+            </div>
+            <div class="p-5 grid grid-cols-2 gap-y-6 gap-x-4">
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Class</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">XI</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Section</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">Science-A</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Roll No</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">04</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Session</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">2023-24</p>
+                </div>
+            </div>
+        </div>
+        <!-- Personal Info Card -->
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-card overflow-hidden">
+            <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center gap-3">
+                <div class="p-1.5 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300">
+                    <span class="material-symbols-outlined text-[20px]">person</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Personal Details</h3>
+            </div>
+            <div class="p-5 grid grid-cols-1 gap-y-5">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Blood
+                            Group</p>
+                        <p class="text-base font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-red-500 text-[18px]">bloodtype</span> O+
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Date of
+                            Birth</p>
+                        <p class="text-base font-semibold text-gray-900 dark:text-gray-100">12 Aug 2006</p>
+                    </div>
+                </div>
+                <div class="h-px bg-gray-100 dark:bg-gray-800 w-full"></div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Father's
+                        Name</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">Md. Rafiqul Islam</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Mother's
+                        Name</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">Mrs. Ayesha Begum</p>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Info Card -->
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-card overflow-hidden mb-6">
+            <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center gap-3">
+                <div class="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300">
+                    <span class="material-symbols-outlined text-[20px]">location_on</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Contact Info</h3>
+            </div>
+            <div class="p-5 flex flex-col gap-4">
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Phone</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100">+880 1712 345678</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Address</p>
+                    <p class="text-base font-semibold text-gray-900 dark:text-gray-100 leading-snug">House 12, Road 5,
+                        Cantonment Residential Area, Dhaka Cantonment.</p>
+                </div>
+                <!-- Map Placeholder -->
+                <div class="w-full h-32 rounded-xl bg-gray-200 mt-2 bg-cover bg-center overflow-hidden relative border border-gray-100 dark:border-gray-700"
+                    data-alt="Map view showing location of student address" data-location="Dhaka Cantonment"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl4GF0LsOKNKK2ZTT4QiEOc6suEQoxf4OQyNqnkvyDI2ISELuX1k1MzI_QGlXmoIGUql3Co4NyA1miSJyOJVZLUii_naLE9dW3uVXCwYNgUN4yMS_cFBwsRas1wkahZrD_O2kCsA3MNnn3GkgqZ3_GRQvZSjF8ChEsALyphSebaNCeyo3QVuh8_ap9NZ5UmIqprs2C7cJ02CclifoGaGfrhIHYS7jQOywa09O0IAF-Z4GNtLF0BWskQwm_7FXGq60tBIO3SA5nkdsQ');">
+                    <div class="absolute inset-0 bg-black/5 dark:bg-black/20 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Bottom Navigation -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pb-safe-bottom z-50">
+        <div class="flex justify-around items-center h-16 max-w-lg mx-auto">
+            <button onclick="window.location.href='Home Screen.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-primary dark:text-indigo-400">
+                <span class="material-symbols-outlined text-[26px]">home</span>
+                <span class="text-[10px] font-medium">Home</span>
+            </button>
+            <button onclick="window.location.href='Official Notices.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-indigo-400 transition-colors">
+                <div class="relative">
+                    <span class="material-symbols-outlined text-[26px]">notifications</span>
+                    <span
+                        class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-surface-dark"></span>
+                </div>
+                <span class="text-[10px] font-medium">Notices</span>
+            </button>
+            <button onclick="window.location.href='Class Messenger.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-indigo-400 transition-colors">
+                <span class="material-symbols-outlined text-[26px]">mail</span>
+                <span class="text-[10px] font-medium">Messages</span>
+            </button>
+            <button onclick="window.location.href='Main Navigation Menu.html'"
+                class="flex flex-col items-center justify-center w-full h-full gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-indigo-400 transition-colors">
+                <span class="material-symbols-outlined text-[26px]">menu</span>
+                <span class="text-[10px] font-medium">Menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Safe area padding for bottom nav -->
+    <div class="h-6"></div>
+</body>
+
+</html>

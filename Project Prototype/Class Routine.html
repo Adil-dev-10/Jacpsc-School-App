@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Class Routine - JACPSC</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002147",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1823",
+                        "sky-custom": "#e0f2fe", // Light sky blue
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar hide for horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#101418] dark:text-gray-100 font-display transition-colors duration-200">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header Bar -->
+        <header class="sticky top-0 z-10 bg-primary text-white shadow-md">
+            <div class="flex items-center p-4 justify-between">
+                <button onclick="window.location.href='Home Screen.html'" aria-label="Go back"
+                    class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+                </button>
+                <h1 class="text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Class Routine
+                </h1>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col">
+            <!-- Filter Section -->
+            <div class="bg-white dark:bg-[#1a2633] px-4 py-5 shadow-sm">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Class Selector -->
+                    <div class="flex-1">
+                        <label class="block text-sm font-medium text-[#101418] dark:text-gray-300 mb-1.5">Class</label>
+                        <div class="relative">
+                            <select
+                                class="w-full appearance-none rounded-lg border border-[#dae0e7] dark:border-gray-600 bg-white dark:bg-[#0f1823] py-3 pl-4 pr-10 text-base text-[#101418] dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+                                <option>Class 9</option>
+                                <option>Class 10</option>
+                                <option>Class 11</option>
+                            </select>
+                            <span
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-[#5e748d]">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Section Selector -->
+                    <div class="flex-1">
+                        <label
+                            class="block text-sm font-medium text-[#101418] dark:text-gray-300 mb-1.5">Section</label>
+                        <div class="relative">
+                            <select
+                                class="w-full appearance-none rounded-lg border border-[#dae0e7] dark:border-gray-600 bg-white dark:bg-[#0f1823] py-3 pl-4 pr-10 text-base text-[#101418] dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+                                <option>Padma</option>
+                                <option>Meghna</option>
+                                <option>Jamuna</option>
+                            </select>
+                            <span
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-[#5e748d]">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Day Selector (Light Sky Blue Constraint) -->
+            <div
+                class="sticky top-[64px] z-10 bg-sky-custom dark:bg-[#0f2942] border-b border-sky-200 dark:border-[#1e3a5f]">
+                <div class="flex gap-3 px-4 py-3 overflow-x-auto no-scrollbar">
+                    <!-- Inactive Day -->
+                    <button
+                        class="flex h-10 min-w-[70px] shrink-0 items-center justify-center rounded-lg bg-white dark:bg-[#1a2633] hover:bg-sky-50 dark:hover:bg-[#253646] transition-colors border border-transparent shadow-sm">
+                        <span class="text-primary dark:text-sky-200 text-sm font-medium">Sun</span>
+                    </button>
+                    <!-- Inactive Day -->
+                    <button
+                        class="flex h-10 min-w-[70px] shrink-0 items-center justify-center rounded-lg bg-white dark:bg-[#1a2633] hover:bg-sky-50 dark:hover:bg-[#253646] transition-colors border border-transparent shadow-sm">
+                        <span class="text-primary dark:text-sky-200 text-sm font-medium">Mon</span>
+                    </button>
+                    <!-- Active Day -->
+                    <button
+                        class="flex h-10 min-w-[70px] shrink-0 items-center justify-center rounded-lg bg-primary shadow-md border border-primary">
+                        <span class="text-white text-sm font-bold">Tue</span>
+                    </button>
+                    <!-- Inactive Day -->
+                    <button
+                        class="flex h-10 min-w-[70px] shrink-0 items-center justify-center rounded-lg bg-white dark:bg-[#1a2633] hover:bg-sky-50 dark:hover:bg-[#253646] transition-colors border border-transparent shadow-sm">
+                        <span class="text-primary dark:text-sky-200 text-sm font-medium">Wed</span>
+                    </button>
+                    <!-- Inactive Day -->
+                    <button
+                        class="flex h-10 min-w-[70px] shrink-0 items-center justify-center rounded-lg bg-white dark:bg-[#1a2633] hover:bg-sky-50 dark:hover:bg-[#253646] transition-colors border border-transparent shadow-sm">
+                        <span class="text-primary dark:text-sky-200 text-sm font-medium">Thu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Routine List -->
+            <div class="flex-1 p-4 flex flex-col gap-4 pb-8">
+                <!-- Period 1 -->
+                <div
+                    class="flex items-center gap-4 bg-white dark:bg-[#1a2633] rounded-xl p-4 shadow-sm border border-transparent hover:border-sky-100 dark:hover:border-gray-700 transition-colors">
+                    <div
+                        class="flex items-center justify-center rounded-lg bg-[#f0f2f5] dark:bg-[#2d3b4e] shrink-0 size-12 text-primary dark:text-sky-200">
+                        <span class="material-symbols-outlined text-[24px]">menu_book</span>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <p class="text-[#101418] dark:text-white text-base font-bold leading-normal truncate">English
+                            1st Paper</p>
+                        <p class="text-[#5e748d] dark:text-gray-400 text-sm font-normal leading-normal truncate">Mrs.
+                            Fatema • Room 302</p>
+                    </div>
+                    <div class="shrink-0 flex flex-col items-end">
+                        <p class="text-primary dark:text-sky-200 text-sm font-bold leading-normal">08:00</p>
+                        <p class="text-[#5e748d] dark:text-gray-500 text-xs font-normal">08:45</p>
+                    </div>
+                </div>
+                <!-- Period 2 (Highlighted - "Now") -->
+                <div
+                    class="relative flex items-center gap-4 bg-white dark:bg-[#1a2633] rounded-xl p-4 shadow-md ring-1 ring-primary/20 border-l-4 border-l-primary">
+                    <div
+                        class="absolute -top-2 right-4 bg-primary text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+                        Now</div>
+                    <div
+                        class="flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/30 shrink-0 size-12 text-primary dark:text-white">
+                        <span class="material-symbols-outlined text-[24px]">calculate</span>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <p class="text-[#101418] dark:text-white text-base font-bold leading-normal truncate">General
+                            Math</p>
+                        <p class="text-[#5e748d] dark:text-gray-400 text-sm font-normal leading-normal truncate">Mr.
+                            Rahman • Room 304</p>
+                    </div>
+                    <div class="shrink-0 flex flex-col items-end">
+                        <p class="text-primary dark:text-sky-200 text-sm font-bold leading-normal">08:45</p>
+                        <p class="text-[#5e748d] dark:text-gray-500 text-xs font-normal">09:30</p>
+                    </div>
+                </div>
+                <!-- Period 3 -->
+                <div
+                    class="flex items-center gap-4 bg-white dark:bg-[#1a2633] rounded-xl p-4 shadow-sm border border-transparent hover:border-sky-100 dark:hover:border-gray-700 transition-colors">
+                    <div
+                        class="flex items-center justify-center rounded-lg bg-[#f0f2f5] dark:bg-[#2d3b4e] shrink-0 size-12 text-primary dark:text-sky-200">
+                        <span class="material-symbols-outlined text-[24px]">science</span>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <p class="text-[#101418] dark:text-white text-base font-bold leading-normal truncate">Physics
+                        </p>
+                        <p class="text-[#5e748d] dark:text-gray-400 text-sm font-normal leading-normal truncate">Mr. Joy
+                            • Lab 2</p>
+                    </div>
+                    <div class="shrink-0 flex flex-col items-end">
+                        <p class="text-primary dark:text-sky-200 text-sm font-bold leading-normal">09:30</p>
+                        <p class="text-[#5e748d] dark:text-gray-500 text-xs font-normal">10:15</p>
+                    </div>
+                </div>
+                <!-- Break Divider -->
+                <div class="relative py-2">
+                    <div aria-hidden="true" class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-dashed border-gray-300 dark:border-gray-700"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span
+                            class="bg-background-light dark:bg-background-dark px-3 text-xs font-medium uppercase text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">coffee</span> Break (30 min)
+                        </span>
+                    </div>
+                </div>
+                <!-- Period 4 -->
+                <div
+                    class="flex items-center gap-4 bg-white dark:bg-[#1a2633] rounded-xl p-4 shadow-sm border border-transparent hover:border-sky-100 dark:hover:border-gray-700 transition-colors">
+                    <div
+                        class="flex items-center justify-center rounded-lg bg-[#f0f2f5] dark:bg-[#2d3b4e] shrink-0 size-12 text-primary dark:text-sky-200">
+                        <span class="material-symbols-outlined text-[24px]">biotech</span>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <p class="text-[#101418] dark:text-white text-base font-bold leading-normal truncate">Biology
+                        </p>
+                        <p class="text-[#5e748d] dark:text-gray-400 text-sm font-normal leading-normal truncate">Ms.
+                            Salma • Room 301</p>
+                    </div>
+                    <div class="shrink-0 flex flex-col items-end">
+                        <p class="text-primary dark:text-sky-200 text-sm font-bold leading-normal">10:45</p>
+                        <p class="text-[#5e748d] dark:text-gray-500 text-xs font-normal">11:30</p>
+                    </div>
+                </div>
+                <!-- Period 5 -->
+                <div
+                    class="flex items-center gap-4 bg-white dark:bg-[#1a2633] rounded-xl p-4 shadow-sm border border-transparent hover:border-sky-100 dark:hover:border-gray-700 transition-colors">
+                    <div
+                        class="flex items-center justify-center rounded-lg bg-[#f0f2f5] dark:bg-[#2d3b4e] shrink-0 size-12 text-primary dark:text-sky-200">
+                        <span class="material-symbols-outlined text-[24px]">history_edu</span>
+                    </div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <p class="text-[#101418] dark:text-white text-base font-bold leading-normal truncate">Bangladesh
+                            &amp; Global</p>
+                        <p class="text-[#5e748d] dark:text-gray-400 text-sm font-normal leading-normal truncate">Mrs.
+                            Rehana • Room 302</p>
+                    </div>
+                    <div class="shrink-0 flex flex-col items-end">
+                        <p class="text-primary dark:text-sky-200 text-sm font-bold leading-normal">11:30</p>
+                        <p class="text-[#5e748d] dark:text-gray-500 text-xs font-normal">12:15</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Bottom padding for scroll -->
+        <div class="h-4"></div>
+    </div>
+</body>
+
+</html>
